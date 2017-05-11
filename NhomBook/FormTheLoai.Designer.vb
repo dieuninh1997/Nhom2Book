@@ -31,9 +31,9 @@ Partial Class FormTheLoai
         Me.BunifuCustomTextbox1 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomTextbox2 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
-        Me.BunifuThinButton22 = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.BunifuThinButton23 = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.BunifuThinButton21 = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuTileButton2 = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuTileButton3 = New Bunifu.Framework.UI.BunifuTileButton()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,7 +75,7 @@ Partial Class FormTheLoai
         Me.BunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray
         Me.BunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue
         Me.BunifuMaterialTextbox1.LineThickness = 3
-        Me.BunifuMaterialTextbox1.Location = New System.Drawing.Point(616, 23)
+        Me.BunifuMaterialTextbox1.Location = New System.Drawing.Point(34, 105)
         Me.BunifuMaterialTextbox1.Margin = New System.Windows.Forms.Padding(4)
         Me.BunifuMaterialTextbox1.Name = "BunifuMaterialTextbox1"
         Me.BunifuMaterialTextbox1.Size = New System.Drawing.Size(370, 44)
@@ -85,7 +85,7 @@ Partial Class FormTheLoai
         'BunifuCustomLabel2
         '
         Me.BunifuCustomLabel2.AutoSize = True
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(35, 91)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(31, 234)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(59, 13)
         Me.BunifuCustomLabel2.TabIndex = 26
@@ -94,7 +94,7 @@ Partial Class FormTheLoai
         'BunifuCustomTextbox1
         '
         Me.BunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomTextbox1.Location = New System.Drawing.Point(100, 85)
+        Me.BunifuCustomTextbox1.Location = New System.Drawing.Point(100, 221)
         Me.BunifuCustomTextbox1.Multiline = True
         Me.BunifuCustomTextbox1.Name = "BunifuCustomTextbox1"
         Me.BunifuCustomTextbox1.Size = New System.Drawing.Size(293, 34)
@@ -103,7 +103,7 @@ Partial Class FormTheLoai
         'BunifuCustomLabel1
         '
         Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(31, 152)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(31, 294)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(63, 13)
         Me.BunifuCustomLabel1.TabIndex = 28
@@ -112,95 +112,77 @@ Partial Class FormTheLoai
         'BunifuCustomTextbox2
         '
         Me.BunifuCustomTextbox2.BorderColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomTextbox2.Location = New System.Drawing.Point(100, 149)
+        Me.BunifuCustomTextbox2.Location = New System.Drawing.Point(100, 284)
         Me.BunifuCustomTextbox2.Multiline = True
         Me.BunifuCustomTextbox2.Name = "BunifuCustomTextbox2"
         Me.BunifuCustomTextbox2.Size = New System.Drawing.Size(293, 34)
         Me.BunifuCustomTextbox2.TabIndex = 29
         '
-        'BunifuThinButton22
+        'BunifuTileButton1
         '
-        Me.BunifuThinButton22.ActiveBorderThickness = 1
-        Me.BunifuThinButton22.ActiveCornerRadius = 20
-        Me.BunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton22.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton22.BackColor = System.Drawing.Color.White
-        Me.BunifuThinButton22.BackgroundImage = CType(resources.GetObject("BunifuThinButton22.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton22.ButtonText = "Cập nhật"
-        Me.BunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuThinButton22.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton22.ForeColor = System.Drawing.Color.Red
-        Me.BunifuThinButton22.IdleBorderThickness = 1
-        Me.BunifuThinButton22.IdleCornerRadius = 20
-        Me.BunifuThinButton22.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton22.Location = New System.Drawing.Point(281, 231)
-        Me.BunifuThinButton22.Margin = New System.Windows.Forms.Padding(5)
-        Me.BunifuThinButton22.Name = "BunifuThinButton22"
-        Me.BunifuThinButton22.Size = New System.Drawing.Size(112, 46)
-        Me.BunifuThinButton22.TabIndex = 30
-        Me.BunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuTileButton1.color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuTileButton1.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuTileButton1.ForeColor = System.Drawing.Color.Black
+        Me.BunifuTileButton1.Image = CType(resources.GetObject("BunifuTileButton1.Image"), System.Drawing.Image)
+        Me.BunifuTileButton1.ImagePosition = 0
+        Me.BunifuTileButton1.ImageZoom = 40
+        Me.BunifuTileButton1.LabelPosition = 20
+        Me.BunifuTileButton1.LabelText = "Thêm"
+        Me.BunifuTileButton1.Location = New System.Drawing.Point(334, 358)
+        Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuTileButton1.Name = "BunifuTileButton1"
+        Me.BunifuTileButton1.Size = New System.Drawing.Size(59, 50)
+        Me.BunifuTileButton1.TabIndex = 45
         '
-        'BunifuThinButton23
+        'BunifuTileButton2
         '
-        Me.BunifuThinButton23.ActiveBorderThickness = 1
-        Me.BunifuThinButton23.ActiveCornerRadius = 20
-        Me.BunifuThinButton23.ActiveFillColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.BackColor = System.Drawing.Color.White
-        Me.BunifuThinButton23.BackgroundImage = CType(resources.GetObject("BunifuThinButton23.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton23.ButtonText = "Thêm"
-        Me.BunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuThinButton23.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton23.ForeColor = System.Drawing.Color.Red
-        Me.BunifuThinButton23.IdleBorderThickness = 1
-        Me.BunifuThinButton23.IdleCornerRadius = 20
-        Me.BunifuThinButton23.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton23.Location = New System.Drawing.Point(281, 287)
-        Me.BunifuThinButton23.Margin = New System.Windows.Forms.Padding(5)
-        Me.BunifuThinButton23.Name = "BunifuThinButton23"
-        Me.BunifuThinButton23.Size = New System.Drawing.Size(112, 46)
-        Me.BunifuThinButton23.TabIndex = 31
-        Me.BunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuTileButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuTileButton2.color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuTileButton2.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.BunifuTileButton2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuTileButton2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuTileButton2.ForeColor = System.Drawing.Color.Black
+        Me.BunifuTileButton2.Image = CType(resources.GetObject("BunifuTileButton2.Image"), System.Drawing.Image)
+        Me.BunifuTileButton2.ImagePosition = 5
+        Me.BunifuTileButton2.ImageZoom = 40
+        Me.BunifuTileButton2.LabelPosition = 20
+        Me.BunifuTileButton2.LabelText = "Xóa"
+        Me.BunifuTileButton2.Location = New System.Drawing.Point(334, 420)
+        Me.BunifuTileButton2.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuTileButton2.Name = "BunifuTileButton2"
+        Me.BunifuTileButton2.Size = New System.Drawing.Size(59, 50)
+        Me.BunifuTileButton2.TabIndex = 46
         '
-        'BunifuThinButton21
+        'BunifuTileButton3
         '
-        Me.BunifuThinButton21.ActiveBorderThickness = 1
-        Me.BunifuThinButton21.ActiveCornerRadius = 20
-        Me.BunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton21.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton21.BackColor = System.Drawing.Color.White
-        Me.BunifuThinButton21.BackgroundImage = CType(resources.GetObject("BunifuThinButton21.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton21.ButtonText = "Xóa"
-        Me.BunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuThinButton21.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton21.ForeColor = System.Drawing.Color.Red
-        Me.BunifuThinButton21.IdleBorderThickness = 1
-        Me.BunifuThinButton21.IdleCornerRadius = 20
-        Me.BunifuThinButton21.IdleFillColor = System.Drawing.Color.White
-        Me.BunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen
-        Me.BunifuThinButton21.Location = New System.Drawing.Point(281, 343)
-        Me.BunifuThinButton21.Margin = New System.Windows.Forms.Padding(5)
-        Me.BunifuThinButton21.Name = "BunifuThinButton21"
-        Me.BunifuThinButton21.Size = New System.Drawing.Size(112, 46)
-        Me.BunifuThinButton21.TabIndex = 32
-        Me.BunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuTileButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuTileButton3.color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BunifuTileButton3.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.BunifuTileButton3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuTileButton3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuTileButton3.ForeColor = System.Drawing.Color.Black
+        Me.BunifuTileButton3.Image = CType(resources.GetObject("BunifuTileButton3.Image"), System.Drawing.Image)
+        Me.BunifuTileButton3.ImagePosition = 5
+        Me.BunifuTileButton3.ImageZoom = 30
+        Me.BunifuTileButton3.LabelPosition = 20
+        Me.BunifuTileButton3.LabelText = "Update"
+        Me.BunifuTileButton3.Location = New System.Drawing.Point(334, 482)
+        Me.BunifuTileButton3.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuTileButton3.Name = "BunifuTileButton3"
+        Me.BunifuTileButton3.Size = New System.Drawing.Size(59, 50)
+        Me.BunifuTileButton3.TabIndex = 47
         '
         'FormTheLoai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.Controls.Add(Me.BunifuThinButton21)
-        Me.Controls.Add(Me.BunifuThinButton23)
-        Me.Controls.Add(Me.BunifuThinButton22)
+        Me.Controls.Add(Me.BunifuTileButton3)
+        Me.Controls.Add(Me.BunifuTileButton2)
+        Me.Controls.Add(Me.BunifuTileButton1)
         Me.Controls.Add(Me.BunifuCustomTextbox2)
         Me.Controls.Add(Me.BunifuCustomLabel1)
         Me.Controls.Add(Me.BunifuCustomTextbox1)
@@ -221,7 +203,7 @@ Partial Class FormTheLoai
     Friend WithEvents BunifuCustomTextbox1 As WindowsFormsControlLibrary1.BunifuCustomTextbox
     Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomTextbox2 As WindowsFormsControlLibrary1.BunifuCustomTextbox
-    Friend WithEvents BunifuThinButton22 As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents BunifuThinButton23 As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents BunifuThinButton21 As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents BunifuTileButton2 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents BunifuTileButton3 As Bunifu.Framework.UI.BunifuTileButton
 End Class

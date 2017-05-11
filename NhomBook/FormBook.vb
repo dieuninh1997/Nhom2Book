@@ -9,4 +9,8 @@
     Private Sub panelTop_Paint(sender As Object, e As PaintEventArgs) Handles panelTop.Paint
 
     End Sub
+
+    Private Sub FormTheLoai1_Load(sender As Object, e As EventArgs) Handles FormTheLoai1.Load
+
+    End Sub
 End Class

@@ -52,8 +52,8 @@ Partial Class FormBook
         Me.BunifuCustomLabel12 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel13 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel14 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.FormTheLoai1 = New NhomBook.FormTheLoai()
         Me.FormTacgia1 = New NhomBook.FormTacgia()
+        Me.FormTheLoai1 = New NhomBook.FormTheLoai()
         Me.panelTop.SuspendLayout()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -68,7 +68,7 @@ Partial Class FormBook
         Me.panelTop.Controls.Add(Me.BunifuCustomLabel3)
         Me.panelTop.Controls.Add(Me.BunifuCustomLabel1)
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelTop.GradientBottomLeft = System.Drawing.Color.Gray
+        Me.panelTop.GradientBottomLeft = System.Drawing.Color.White
         Me.panelTop.GradientBottomRight = System.Drawing.Color.White
         Me.panelTop.GradientTopLeft = System.Drawing.Color.White
         Me.panelTop.GradientTopRight = System.Drawing.Color.White
@@ -84,7 +84,7 @@ Partial Class FormBook
         Me.separator.ForeColor = System.Drawing.Color.Aqua
         Me.separator.LineColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(205, Byte), Integer), CType(CType(174, Byte), Integer))
         Me.separator.LineThickness = 5
-        Me.separator.Location = New System.Drawing.Point(19, 46)
+        Me.separator.Location = New System.Drawing.Point(25, 46)
         Me.separator.Name = "separator"
         Me.separator.Size = New System.Drawing.Size(50, 13)
         Me.separator.TabIndex = 4
@@ -96,7 +96,7 @@ Partial Class FormBook
         Me.BunifuCustomLabel4.AutoSize = True
         Me.BunifuCustomLabel4.BackColor = System.Drawing.Color.White
         Me.BunifuCustomLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(99, 23)
+        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(105, 25)
         Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
         Me.BunifuCustomLabel4.Size = New System.Drawing.Size(60, 20)
         Me.BunifuCustomLabel4.TabIndex = 3
@@ -107,7 +107,7 @@ Partial Class FormBook
         Me.BunifuCustomLabel3.AutoSize = True
         Me.BunifuCustomLabel3.BackColor = System.Drawing.Color.White
         Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(191, 23)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(191, 25)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(64, 20)
         Me.BunifuCustomLabel3.TabIndex = 2
@@ -118,7 +118,7 @@ Partial Class FormBook
         Me.BunifuCustomLabel1.AutoSize = True
         Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.White
         Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(21, 23)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(29, 23)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(46, 20)
         Me.BunifuCustomLabel1.TabIndex = 0
@@ -378,14 +378,6 @@ Partial Class FormBook
         Me.BunifuCustomLabel14.TabIndex = 26
         Me.BunifuCustomLabel14.Text = "đầu sách"
         '
-        'FormTheLoai1
-        '
-        Me.FormTheLoai1.BackColor = System.Drawing.Color.White
-        Me.FormTheLoai1.Location = New System.Drawing.Point(0, 65)
-        Me.FormTheLoai1.Name = "FormTheLoai1"
-        Me.FormTheLoai1.Size = New System.Drawing.Size(1012, 631)
-        Me.FormTheLoai1.TabIndex = 28
-        '
         'FormTacgia1
         '
         Me.FormTacgia1.BackColor = System.Drawing.Color.White
@@ -393,6 +385,15 @@ Partial Class FormBook
         Me.FormTacgia1.Name = "FormTacgia1"
         Me.FormTacgia1.Size = New System.Drawing.Size(1012, 631)
         Me.FormTacgia1.TabIndex = 27
+        '
+        'FormTheLoai1
+        '
+        Me.FormTheLoai1.BackColor = System.Drawing.Color.White
+        Me.FormTheLoai1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FormTheLoai1.Location = New System.Drawing.Point(0, 67)
+        Me.FormTheLoai1.Name = "FormTheLoai1"
+        Me.FormTheLoai1.Size = New System.Drawing.Size(1013, 632)
+        Me.FormTheLoai1.TabIndex = 28
         '
         'FormBook
         '

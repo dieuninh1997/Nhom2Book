@@ -67,16 +67,15 @@
             'tranlogo.HideSync(pcb1)
             panelMenu.Visible = False
             panelMenu.Width = 45
-            ' tranpanel.ShowSync(pnlMenu)
-            btnScroll.Location = New Point(18, 60)
+            tranpanel.ShowSync(panelMenu)
+            btnScroll.Location = New Point(6, 6)
         Else
             panelMenu.Width = 185
-            btnScroll.Location = New Point(167, 60)
+            btnScroll.Location = New Point(144, 8)
             ' tranlogo.ShowSync(pcb1)
-            ' tranpanel.ShowSync(pnlMenu)
+            tranpanel.ShowSync(panelMenu)
         End If
     End Sub
-
 
     Private Sub panel_MouseMove(sender As Object, e As MouseEventArgs) Handles panel.MouseMove
         If e.Button Then
