@@ -26,10 +26,10 @@ Partial Class FormBook
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelTop = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.btnTheloai = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.btnTacgia = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.separator = New Bunifu.Framework.UI.BunifuSeparator()
-        Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.btnSach = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel5 = New Bunifu.Framework.UI.BunifuCustomLabel()
@@ -52,8 +52,8 @@ Partial Class FormBook
         Me.BunifuCustomLabel12 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel13 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel14 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.FormTacgia1 = New NhomBook.FormTacgia()
         Me.FormTheLoai1 = New NhomBook.FormTheLoai()
+        Me.FormTacgia1 = New NhomBook.FormTacgia()
         Me.panelTop.SuspendLayout()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -64,9 +64,9 @@ Partial Class FormBook
         Me.panelTop.BackgroundImage = CType(resources.GetObject("panelTop.BackgroundImage"), System.Drawing.Image)
         Me.panelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.panelTop.Controls.Add(Me.separator)
-        Me.panelTop.Controls.Add(Me.BunifuCustomLabel4)
-        Me.panelTop.Controls.Add(Me.BunifuCustomLabel3)
-        Me.panelTop.Controls.Add(Me.BunifuCustomLabel1)
+        Me.panelTop.Controls.Add(Me.btnSach)
+        Me.panelTop.Controls.Add(Me.btnTacgia)
+        Me.panelTop.Controls.Add(Me.btnTheloai)
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTop.GradientBottomLeft = System.Drawing.Color.White
         Me.panelTop.GradientBottomRight = System.Drawing.Color.White
@@ -77,6 +77,28 @@ Partial Class FormBook
         Me.panelTop.Quality = 10
         Me.panelTop.Size = New System.Drawing.Size(1013, 67)
         Me.panelTop.TabIndex = 0
+        '
+        'btnTheloai
+        '
+        Me.btnTheloai.BackColor = System.Drawing.Color.White
+        Me.btnTheloai.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTheloai.Location = New System.Drawing.Point(198, 23)
+        Me.btnTheloai.Name = "btnTheloai"
+        Me.btnTheloai.Size = New System.Drawing.Size(76, 36)
+        Me.btnTheloai.TabIndex = 6
+        Me.btnTheloai.Text = "Thể loại"
+        Me.btnTheloai.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'btnTacgia
+        '
+        Me.btnTacgia.BackColor = System.Drawing.Color.White
+        Me.btnTacgia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTacgia.Location = New System.Drawing.Point(97, 23)
+        Me.btnTacgia.Name = "btnTacgia"
+        Me.btnTacgia.Size = New System.Drawing.Size(72, 36)
+        Me.btnTacgia.TabIndex = 5
+        Me.btnTacgia.Text = "Tác giả"
+        Me.btnTacgia.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'separator
         '
@@ -91,38 +113,16 @@ Partial Class FormBook
         Me.separator.Transparency = 255
         Me.separator.Vertical = False
         '
-        'BunifuCustomLabel4
+        'btnSach
         '
-        Me.BunifuCustomLabel4.AutoSize = True
-        Me.BunifuCustomLabel4.BackColor = System.Drawing.Color.White
-        Me.BunifuCustomLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(105, 25)
-        Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
-        Me.BunifuCustomLabel4.Size = New System.Drawing.Size(60, 20)
-        Me.BunifuCustomLabel4.TabIndex = 3
-        Me.BunifuCustomLabel4.Text = "Tác giả"
-        '
-        'BunifuCustomLabel3
-        '
-        Me.BunifuCustomLabel3.AutoSize = True
-        Me.BunifuCustomLabel3.BackColor = System.Drawing.Color.White
-        Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(191, 25)
-        Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
-        Me.BunifuCustomLabel3.Size = New System.Drawing.Size(64, 20)
-        Me.BunifuCustomLabel3.TabIndex = 2
-        Me.BunifuCustomLabel3.Text = "Thể loại"
-        '
-        'BunifuCustomLabel1
-        '
-        Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.White
-        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(29, 23)
-        Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
-        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(46, 20)
-        Me.BunifuCustomLabel1.TabIndex = 0
-        Me.BunifuCustomLabel1.Text = "Sách"
+        Me.btnSach.BackColor = System.Drawing.Color.White
+        Me.btnSach.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSach.Location = New System.Drawing.Point(23, 23)
+        Me.btnSach.Name = "btnSach"
+        Me.btnSach.Size = New System.Drawing.Size(52, 36)
+        Me.btnSach.TabIndex = 0
+        Me.btnSach.Text = "Sách"
+        Me.btnSach.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'BunifuCustomDataGrid1
         '
@@ -378,14 +378,6 @@ Partial Class FormBook
         Me.BunifuCustomLabel14.TabIndex = 26
         Me.BunifuCustomLabel14.Text = "đầu sách"
         '
-        'FormTacgia1
-        '
-        Me.FormTacgia1.BackColor = System.Drawing.Color.White
-        Me.FormTacgia1.Location = New System.Drawing.Point(1, 65)
-        Me.FormTacgia1.Name = "FormTacgia1"
-        Me.FormTacgia1.Size = New System.Drawing.Size(1012, 631)
-        Me.FormTacgia1.TabIndex = 27
-        '
         'FormTheLoai1
         '
         Me.FormTheLoai1.BackColor = System.Drawing.Color.White
@@ -394,6 +386,14 @@ Partial Class FormBook
         Me.FormTheLoai1.Name = "FormTheLoai1"
         Me.FormTheLoai1.Size = New System.Drawing.Size(1013, 632)
         Me.FormTheLoai1.TabIndex = 28
+        '
+        'FormTacgia1
+        '
+        Me.FormTacgia1.BackColor = System.Drawing.Color.White
+        Me.FormTacgia1.Location = New System.Drawing.Point(1, 65)
+        Me.FormTacgia1.Name = "FormTacgia1"
+        Me.FormTacgia1.Size = New System.Drawing.Size(1012, 631)
+        Me.FormTacgia1.TabIndex = 27
         '
         'FormBook
         '
@@ -428,7 +428,6 @@ Partial Class FormBook
         Me.Name = "FormBook"
         Me.Size = New System.Drawing.Size(1013, 699)
         Me.panelTop.ResumeLayout(False)
-        Me.panelTop.PerformLayout()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -436,9 +435,7 @@ Partial Class FormBook
     End Sub
 
     Friend WithEvents panelTop As Bunifu.Framework.UI.BunifuGradientPanel
-    Friend WithEvents BunifuCustomLabel4 As Bunifu.Framework.UI.BunifuCustomLabel
-    Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
-    Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents btnSach As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents separator As Bunifu.Framework.UI.BunifuSeparator
     Friend WithEvents BunifuCustomDataGrid1 As Bunifu.Framework.UI.BunifuCustomDataGrid
     Friend WithEvents BunifuCustomLabel2 As Bunifu.Framework.UI.BunifuCustomLabel
@@ -464,4 +461,6 @@ Partial Class FormBook
     Friend WithEvents BunifuCustomLabel14 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents FormTacgia1 As FormTacgia
     Friend WithEvents FormTheLoai1 As FormTheLoai
+    Friend WithEvents btnTheloai As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents btnTacgia As Bunifu.Framework.UI.BunifuCustomLabel
 End Class

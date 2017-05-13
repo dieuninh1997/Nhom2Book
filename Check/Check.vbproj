@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{703C78D0-862A-4EA6-B7B6-E4DB2DFAACF8}</ProjectGuid>
+    <ProjectGuid>{8F78DF99-7EBC-4BE0-AB2E-9C14CC20E654}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>NhomBook.My.MyApplication</StartupObject>
-    <RootNamespace>NhomBook</RootNamespace>
-    <AssemblyName>NhomBook</AssemblyName>
+    <StartupObject>Check.My.MyApplication</StartupObject>
+    <RootNamespace>Check</RootNamespace>
+    <AssemblyName>Check</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>NhomBook.xml</DocumentationFile>
+    <DocumentationFile>Check.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>NhomBook.xml</DocumentationFile>
+    <DocumentationFile>Check.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,14 +47,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>C:\Users\ttdn1\Desktop\Bunifu_UI_v1.52.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -76,50 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBook.Designer.vb">
-      <DependentUpon>FormBook.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormBook.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Formhome.Designer.vb">
-      <DependentUpon>Formhome.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formhome.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormNCC.Designer.vb">
-      <DependentUpon>FormNCC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormNCC.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormPhieuNhap.Designer.vb">
-      <DependentUpon>FormPhieuNhap.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormPhieuNhap.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormTacgia.Designer.vb">
-      <DependentUpon>FormTacgia.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormTacgia.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FormTheLoai.Designer.vb">
-      <DependentUpon>FormTheLoai.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormTheLoai.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KetNoi.vb" />
+    <Compile Include="Kiemtra.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -135,34 +88,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="QuanLyBanSachDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyBanSachDataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormBook.resx">
-      <DependentUpon>FormBook.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formhome.resx">
-      <DependentUpon>Formhome.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNCC.resx">
-      <DependentUpon>FormNCC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPhieuNhap.resx">
-      <DependentUpon>FormPhieuNhap.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTacgia.resx">
-      <DependentUpon>FormTacgia.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTheLoai.resx">
-      <DependentUpon>FormTheLoai.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -181,17 +108,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="QuanLyBanSachDataSet.xsc">
-      <DependentUpon>QuanLyBanSachDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyBanSachDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyBanSachDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyBanSachDataSet.xss">
-      <DependentUpon>QuanLyBanSachDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

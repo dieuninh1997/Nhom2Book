@@ -27,6 +27,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.panelMenu = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.btnScroll = New System.Windows.Forms.PictureBox()
         Me.btnBill = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnImportedBook = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnProvider = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -34,7 +35,6 @@ Partial Class Form1
         Me.btnCustomer = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnBook = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnHome = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btnScroll = New System.Windows.Forms.PictureBox()
         Me.panel = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.btnMini = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
@@ -77,6 +77,18 @@ Partial Class Form1
         Me.panelMenu.Quality = 10
         Me.panelMenu.Size = New System.Drawing.Size(185, 664)
         Me.panelMenu.TabIndex = 0
+        '
+        'btnScroll
+        '
+        Me.btnScroll.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.tranpanel.SetDecoration(Me.btnScroll, BunifuAnimatorNS.DecorationType.None)
+        Me.btnScroll.Image = CType(resources.GetObject("btnScroll.Image"), System.Drawing.Image)
+        Me.btnScroll.Location = New System.Drawing.Point(144, 8)
+        Me.btnScroll.Name = "btnScroll"
+        Me.btnScroll.Size = New System.Drawing.Size(30, 33)
+        Me.btnScroll.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.btnScroll.TabIndex = 0
+        Me.btnScroll.TabStop = False
         '
         'btnBill
         '
@@ -322,18 +334,6 @@ Partial Class Form1
         Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnHome.Textcolor = System.Drawing.Color.White
         Me.btnHome.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'btnScroll
-        '
-        Me.btnScroll.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.tranpanel.SetDecoration(Me.btnScroll, BunifuAnimatorNS.DecorationType.None)
-        Me.btnScroll.Image = CType(resources.GetObject("btnScroll.Image"), System.Drawing.Image)
-        Me.btnScroll.Location = New System.Drawing.Point(144, 8)
-        Me.btnScroll.Name = "btnScroll"
-        Me.btnScroll.Size = New System.Drawing.Size(30, 33)
-        Me.btnScroll.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnScroll.TabIndex = 0
-        Me.btnScroll.TabStop = False
         '
         'panel
         '
