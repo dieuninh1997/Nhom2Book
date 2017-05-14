@@ -53,6 +53,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
@@ -76,6 +77,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classPHIEUNHAP.vb" />
+    <Compile Include="classSACH.vb" />
+    <Compile Include="classTACGIA.vb" />
+    <Compile Include="classTHELOAI.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +125,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="KetNoi.vb" />
+    <Compile Include="Kiemtra.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -3,21 +3,22 @@ Public Class KetNoi
     Public cmd As SqlCommand
     Public da As SqlDataAdapter
     Public con As SqlConnection
-    Public Sub openKnoi()
+    Public Sub OpenConnect()
         con = New SqlConnection("Data Source=DIEUNINH\SQLEXPRESS;Initial Catalog=QuanLyBanSach;Integrated Security=True")
         con.Open()
         If con.State = ConnectionState.Open Then
             con.Close()
         End If
     End Sub
-    Public Function Dongknoi()
+    Public Function CloseConnect()
         If con.State = ConnectionState.Open Then
             con.Close()
         End If
         Return con
     End Function
     Public Function getData(ByVal sql As String) As DataTable
-        openKnoi()
+        OpenConnect()
+
         cmd = New SqlCommand(sql, con)
         cmd.CommandType = CommandType.StoredProcedure
         da = New SqlDataAdapter(cmd)
@@ -47,7 +48,7 @@ Public Class KetNoi
         End If
         Return kq
     End Function
-    Public Function checkID(ByVal sql As String, ByVal Name() As String, ByVal Values() As Object, ByVal _soluong As Integer) As DataTable
+    Public Function checkID(ByVal sql As String, ByVal Name() As String, ByVal Values() As String, ByVal _soluong As Integer) As DataTable
         Dim i As Integer
         cmd = New SqlCommand(sql, con)
         cmd.CommandType = CommandType.StoredProcedure

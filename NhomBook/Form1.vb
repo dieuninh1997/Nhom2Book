@@ -78,7 +78,6 @@
     End Sub
 
 
-
     Private Sub panel_MouseMove(sender As Object, e As MouseEventArgs) Handles panel.MouseMove
         If e.Button Then
             newpoint = Control.MousePosition
