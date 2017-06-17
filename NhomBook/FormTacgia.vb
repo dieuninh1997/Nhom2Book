@@ -4,7 +4,7 @@
     Private _soluong As Integer
     Private sql As String
     Private ktSdt As New Kiemtra
-
+    Private sl As Integer = 0
 
     Private Sub ShowData()
         dgTacgia.DataSource = kn.getData("loadTACGIA")
@@ -26,13 +26,15 @@
 
     Private Sub FormTacgia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtTimKiemTg.Text = ""
-        txtTimKiemTg.HintText = "Tìm kiếm theo tên "
+        txtTimKiemTg.HintText = "Tìm kiếm theo tên tác giả"
         lbMaTacgia.Visible = False
         lbTentacgia.Visible = False
         lbSdt.Visible = False
 
         ShowData()
         NameHeaderDgv()
+        sl = dgTacgia.Rows.Count - 1
+        lbSoluongTacgia.Text = sl.ToString
 
 
 
@@ -96,6 +98,8 @@
                         sql = "insertTACGIA"
                         Add(sql, Tacgia)
                         ShowData()
+                        sl = sl + 1
+                        lbSoluongTacgia.Text = sl.ToString
                         MessageBox.Show("Thêm thành công!")
                     End If
                 End If
@@ -116,6 +120,8 @@
             Remove(sql, Tacgia)
             ShowData()
             ClearText()
+            sl = sl - 1
+            lbSoluongTacgia.Text = sl.ToString
             MessageBox.Show("Xóa thành công!")
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -206,5 +212,10 @@
 
 
         End If
+    End Sub
+
+    Private Sub btnDelSearch_Click(sender As Object, e As EventArgs) Handles btnDelSearch.Click
+        txtTimKiemTg.Text = ""
+        txtTimKiemTg.HintText = "Tìm kiếm theo tên tác giả"
     End Sub
 End Class

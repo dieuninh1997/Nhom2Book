@@ -1,90 +1,118 @@
 ﻿Public Class Form1
-    Dim x, y As Integer
-    Dim newpoint As Point
-    Private Sub Formhome1_Load(sender As Object, e As EventArgs)
-        FormBook1.Visible = False
-        FormBook1.FormTacgia1.Visible = False
-        FormBook1.FormTheLoai1.Visible = False
-        FormNCC1.Visible = False
-        FormPhieuNhap1.Visible = False
-
-
+    Private Sub picClose_Click(sender As Object, e As EventArgs) Handles picClose.Click
+        Environment.Exit(0)
     End Sub
 
-    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-        Formhome1.BringToFront()
-        Formhome1.Visible = True
-
-    End Sub
-
-    Private Sub btnBook_Click(sender As Object, e As EventArgs) Handles btnBook.Click
-        FormBook1.BringToFront()
-        FormBook1.Visible = True
-        Formhome1.Visible = False
-
-
-
-    End Sub
-
-    Private Sub btnProvider_Click(sender As Object, e As EventArgs) Handles btnProvider.Click
-        FormNCC1.BringToFront()
-        FormNCC1.Visible = True
-        FormBook1.Visible = False
-        Formhome1.Visible = False
-
-
-    End Sub
-
-    Private Sub btnImportedBook_Click(sender As Object, e As EventArgs) Handles btnImportedBook.Click
-        FormPhieuNhap1.BringToFront()
-        FormPhieuNhap1.Visible = True
-        FormBook1.Visible = False
-        Formhome1.Visible = False
-        FormNCC1.Visible = False
-
-
-    End Sub
-
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Try
-            Me.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString)
-        End Try
-    End Sub
-
-    Private Sub btnMini_Click(sender As Object, e As EventArgs) Handles btnMini.Click
+    Private Sub picMinus_Click(sender As Object, e As EventArgs) Handles picMinus.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub panel_MouseDown(sender As Object, e As MouseEventArgs) Handles panel.MouseDown
-        x = Control.MousePosition.X - Me.Location.X
-        y = Control.MousePosition.Y - Me.Location.Y
+    Private Sub picShow_Click(sender As Object, e As EventArgs) Handles picShow.Click
+        'If pnMenu.Width = 243 Then
+        'pnMenu.Width = 50
+        'trans1.ShowSync(pnMenu)
+        'picShow.Location = New Point(10, 6)
+
+        ' Else
+        'pnMenu.Width = 243
+        'picShow.Location = New Point(195, 6)
+        'trans1.ShowSync(pnMenu)
+
+        'End If
     End Sub
 
-    Private Sub btnScroll_Click(sender As Object, e As EventArgs) Handles btnScroll.Click
-        If panelMenu.Width = 185 Then
-            'tranlogo.HideSync(pcb1)
-            panelMenu.Visible = False
-            panelMenu.Width = 45
-            tranpanel.ShowSync(panelMenu)
-            btnScroll.Location = New Point(6, 6)
-        Else
-            panelMenu.Width = 185
-            btnScroll.Location = New Point(144, 8)
-            ' tranlogo.ShowSync(pcb1)
-            tranpanel.ShowSync(panelMenu)
-        End If
+    Private Sub btnTrangChu_Click(sender As Object, e As EventArgs) Handles btnTrangChu.Click
+        btnTrangChu.Normalcolor = btnTrangChu.Activecolor
+        btnSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnKhachHang.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhanvien.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhacc.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhapSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnHoaDon.Normalcolor = Color.FromArgb(68, 102, 255)
+        Formhome1.BringToFront()
+        trans1.ShowSync(Formhome1)
+
     End Sub
 
+    Private Sub btnSach_Click(sender As Object, e As EventArgs) Handles btnSach.Click
+        btnTrangChu.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnSach.Normalcolor = btnSach.Activecolor
+        btnKhachHang.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhanvien.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhacc.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhapSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnHoaDon.Normalcolor = Color.FromArgb(68, 102, 255)
+        FormBook1.BringToFront()
+        trans1.ShowSync(FormBook1)
+    End Sub
 
-    Private Sub panel_MouseMove(sender As Object, e As MouseEventArgs) Handles panel.MouseMove
-        If e.Button Then
-            newpoint = Control.MousePosition
-            newpoint.X -= x
-            newpoint.Y -= y
-            Me.Location = newpoint
-            Application.DoEvents()
-        End If
+    Private Sub btnKhachHang_Click(sender As Object, e As EventArgs) Handles btnKhachHang.Click
+        btnTrangChu.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnKhachHang.Normalcolor = btnKhachHang.Activecolor
+        btnNhanvien.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhacc.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhapSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnHoaDon.Normalcolor = Color.FromArgb(68, 102, 255)
+        FormKhachhang1.BringToFront()
+        trans1.ShowSync(FormKhachhang1)
+    End Sub
+
+    Private Sub btnNhanvien_Click(sender As Object, e As EventArgs) Handles btnNhanvien.Click
+        btnTrangChu.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnKhachHang.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhanvien.Normalcolor = btnNhanvien.Activecolor
+        btnNhacc.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhapSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnHoaDon.Normalcolor = Color.FromArgb(68, 102, 255)
+        FormNhanvien1.BringToFront()
+        trans1.ShowSync(FormNhanvien1)
+    End Sub
+
+    Private Sub btnNhacc_Click(sender As Object, e As EventArgs) Handles btnNhacc.Click
+        btnTrangChu.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnKhachHang.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhanvien.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhacc.Normalcolor = btnNhacc.Activecolor
+        btnNhapSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnHoaDon.Normalcolor = Color.FromArgb(68, 102, 255)
+        FormNCC1.BringToFront()
+        trans1.ShowSync(FormNCC1)
+    End Sub
+
+    Private Sub btnNhapSach_Click(sender As Object, e As EventArgs) Handles btnNhapSach.Click
+        btnTrangChu.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnKhachHang.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhanvien.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhacc.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhapSach.Normalcolor = btnNhapSach.Activecolor
+        btnHoaDon.Normalcolor = Color.FromArgb(68, 102, 255)
+        FormPhieuNhap1.BringToFront()
+        trans1.ShowSync(FormPhieuNhap1)
+    End Sub
+
+    Private Sub btnHoaDon_Click(sender As Object, e As EventArgs) Handles btnHoaDon.Click
+        btnTrangChu.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnKhachHang.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhanvien.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhacc.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnNhapSach.Normalcolor = Color.FromArgb(68, 102, 255)
+        btnHoaDon.Normalcolor = btnHoaDon.Activecolor
+        FormHoadon1.BringToFront()
+        trans1.ShowSync(FormHoadon1)
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnTrangChu.Normalcolor = btnTrangChu.Activecolor
+        Formhome1.BringToFront()
+
+    End Sub
+
+    Private Sub pnMenu_Paint(sender As Object, e As PaintEventArgs) Handles pnMenu.Paint
+
     End Sub
 End Class

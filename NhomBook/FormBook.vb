@@ -3,7 +3,7 @@
     Dim kn As New KetNoi
     Private _soluong As Integer
     Private sql As String
-
+    Private sl As Integer = 0
     Public Function ktrID(ByVal Id As String) As DataTable
         Dim _soluong As Integer
         _soluong = 0
@@ -124,6 +124,9 @@
     Private Sub FormBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Width = 1014
         Me.Height = 664
+        Me.BackColor = Color.WhiteSmoke
+        btnDelSearch.BackColor = Color.WhiteSmoke
+        dgSach.HeaderForeColor = Color.White
 
         FormTacgia1.Visible = False
         FormTheLoai1.Visible = False
@@ -154,7 +157,8 @@
         loadTacgia()
         loadTheloai()
 
-
+        sl = dgSach.Rows.Count - 1
+        lbSoluongSach.Text = sl.ToString
 
     End Sub
 
@@ -233,6 +237,9 @@
             Remove(sql, Sach)
             ShowData()
             ClearText()
+            sl = sl - 1
+            lbSoluongSach.Text = sl.ToString
+
             MessageBox.Show("Xóa thành công!")
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -275,6 +282,8 @@
                     sql = "insertSACH"
                     Add(sql, Sach)
                     ShowData()
+                    sl = sl + 1
+                    lbSoluongSach.Text = sl.ToString
                     MessageBox.Show("Thêm thành công!")
                 End If
             End If
@@ -297,4 +306,13 @@
     Private Sub btnDelSearch_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub btnDelSearch_Click_1(sender As Object, e As EventArgs) Handles btnDelSearch.Click
+        txtTimKiem.Text = ""
+
+        txtTimKiem.HintText = "Tìm kiếm theo tên "
+
+    End Sub
+
+
 End Class

@@ -48,7 +48,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>C:\Users\ttdn1\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -77,15 +81,25 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassHoadon.vb" />
+    <Compile Include="ClassKhach.vb" />
+    <Compile Include="ClassNCC.vb" />
+    <Compile Include="ClassNhanvien.vb" />
     <Compile Include="classPHIEUNHAP.vb" />
     <Compile Include="classSACH.vb" />
     <Compile Include="classTACGIA.vb" />
+    <Compile Include="classTAIKHOAN.vb" />
     <Compile Include="classTHELOAI.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBook.Designer.vb">
@@ -94,10 +108,34 @@
     <Compile Include="FormBook.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="FormChitietHD.Designer.vb">
+      <DependentUpon>FormChitietHD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormChitietHD.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormChiTietPN.Designer.vb">
+      <DependentUpon>FormChiTietPN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormChiTietPN.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormHoadon.Designer.vb">
+      <DependentUpon>FormHoadon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormHoadon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Formhome.Designer.vb">
       <DependentUpon>Formhome.vb</DependentUpon>
     </Compile>
     <Compile Include="Formhome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormKhachhang.Designer.vb">
+      <DependentUpon>FormKhachhang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhachhang.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormNCC.Designer.vb">
@@ -110,6 +148,12 @@
       <DependentUpon>FormPhieuNhap.vb</DependentUpon>
     </Compile>
     <Compile Include="FormPhieuNhap.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormSignUp.Designer.vb">
+      <DependentUpon>FormSignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSignUp.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FormTacgia.Designer.vb">
@@ -141,27 +185,55 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="QuanLyBanSachDataSet.Designer.vb">
+    <Compile Include="FormNhanvien.Designer.vb">
+      <DependentUpon>FormNhanvien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhanvien.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="quanlysachDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyBanSachDataSet.xsd</DependentUpon>
+      <DependentUpon>quanlysachDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ToExcel.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBook.resx">
       <DependentUpon>FormBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChitietHD.resx">
+      <DependentUpon>FormChitietHD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChiTietPN.resx">
+      <DependentUpon>FormChiTietPN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHoadon.resx">
+      <DependentUpon>FormHoadon.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formhome.resx">
       <DependentUpon>Formhome.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormKhachhang.resx">
+      <DependentUpon>FormKhachhang.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNCC.resx">
       <DependentUpon>FormNCC.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanvien.resx">
+      <DependentUpon>FormNhanvien.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPhieuNhap.resx">
       <DependentUpon>FormPhieuNhap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSignUp.resx">
+      <DependentUpon>FormSignUp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTacgia.resx">
       <DependentUpon>FormTacgia.vb</DependentUpon>
@@ -187,17 +259,29 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="QuanLyBanSachDataSet.xsc">
-      <DependentUpon>QuanLyBanSachDataSet.xsd</DependentUpon>
+    <None Include="packages.config" />
+    <None Include="quanlysachDataSet.xsc">
+      <DependentUpon>quanlysachDataSet.xsd</DependentUpon>
     </None>
-    <None Include="QuanLyBanSachDataSet.xsd">
+    <None Include="quanlysachDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyBanSachDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>quanlysachDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QuanLyBanSachDataSet.xss">
-      <DependentUpon>QuanLyBanSachDataSet.xsd</DependentUpon>
+    <None Include="quanlysachDataSet.xss">
+      <DependentUpon>quanlysachDataSet.xsd</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

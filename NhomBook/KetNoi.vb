@@ -1,10 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Public Class KetNoi
-    Public cmd As SqlCommand
-    Public da As SqlDataAdapter
-    Public con As SqlConnection
+    Dim connectString As String = "Data Source=DIEUNINH\SQLEXPRESS;Initial Catalog=QuanLyBanSach;Integrated Security=True"
+    Public cmd As New SqlCommand
+    Public da As New SqlDataAdapter
+    Public con As New SqlConnection(connectString)
     Public Sub OpenConnect()
-        con = New SqlConnection("Data Source=DIEUNINH\SQLEXPRESS;Initial Catalog=QuanLyBanSach;Integrated Security=True")
+        '  con = New SqlConnection("Data Source=DESKTOP-R7TCLO5;Initial Catalog=quanlysach;Integrated Security=True")
         con.Open()
         If con.State = ConnectionState.Open Then
             con.Close()
@@ -26,6 +27,7 @@ Public Class KetNoi
         da.Fill(dt)
         Return dt
     End Function
+
     Public Sub excue()
         con.Open()
         cmd.ExecuteNonQuery()
@@ -50,11 +52,12 @@ Public Class KetNoi
     End Function
     Public Function checkID(ByVal sql As String, ByVal Name() As String, ByVal Values() As String, ByVal _soluong As Integer) As DataTable
         Dim i As Integer
-        cmd = New SqlCommand(sql, con)
-        cmd.CommandType = CommandType.StoredProcedure
+
         If con.State = ConnectionState.Closed Then
             con.Open()
         End If
+        cmd = New SqlCommand(sql, con)
+        cmd.CommandType = CommandType.StoredProcedure
         For i = 0 To _soluong
             cmd.Parameters.AddWithValue(Name(i), Values(i))
         Next

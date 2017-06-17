@@ -64,6 +64,16 @@ Namespace My
                 Return CType(Me("QuanLyBanSachConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=quanlysach;Integrated Security=True")>  _
+        Public ReadOnly Property quanlysachConnectionString() As String
+            Get
+                Return CType(Me("quanlysachConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

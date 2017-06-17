@@ -3,6 +3,7 @@
     Dim kn As New KetNoi
     Private _soluong As Integer
     Private sql As String
+    Private sl As Integer = 0
 
     Public Function ktrID(ByVal Id As String) As DataTable
         Dim _soluong As Integer
@@ -69,13 +70,14 @@
     End Sub
     Private Sub FormTheLoai_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtTimkiemTheloai.Text = ""
-        txtTimkiemTheloai.HintText = "Tìm kiếm theo tên "
+        txtTimkiemTheloai.HintText = "Tìm kiếm theo tên thể loại"
         ShowData()
         NameHeaderDgv()
         lbMatheloai.Visible = False
         lbTentheloai.Visible = False
 
-
+        sl = dgTheloai.Rows.Count - 1
+        lbSoluongTheLoai.Text = sl.ToString
     End Sub
 
 
@@ -119,6 +121,9 @@
                     sql = "insertTHELOAI"
                     Add(sql, TL)
                     ShowData()
+
+                    sl = sl + 1
+                    lbSoluongTheLoai.Text = sl.ToString
                     MessageBox.Show("Thêm thành công!")
                 End If
             End If
@@ -136,6 +141,9 @@
             Remove(sql, TL)
             ShowData()
             ClearText()
+
+            sl = sl - 1
+            lbSoluongTheLoai.Text = sl.ToString
             MessageBox.Show("Xóa thành công!")
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -167,10 +175,13 @@
     End Sub
 
     Private Sub btnDelSearch_Click(sender As Object, e As EventArgs) Handles btnDelSearch.Click
-
+        txtTimkiemTheloai.Text = ""
+        txtTimkiemTheloai.HintText = "Tìm kiếm theo tên thể loại"
     End Sub
 
     Private Sub txtTimkiemTheloai_OnValueChanged(sender As Object, e As EventArgs) Handles txtTimkiemTheloai.OnValueChanged
 
     End Sub
+
+
 End Class

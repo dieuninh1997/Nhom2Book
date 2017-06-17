@@ -118,22 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BunifuTileButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAiBJREFUSEvd
-        VM9LVUEUPrbIIAzFXLgqCHXTzja6CPPpVVFCIcFVYkYbIfoDWjzInW0CqXX7Fumuxds/A23RD0ENUbFA
-        tE0bEWL6zpnvzruXGu97Wz/4uGfOfOc7c+/MHbl4cANyxSUy5oblDfgR8Q6ev8ATxpp7bRpoWVYf3JDM
-        ofAnTFxdVG0isyw/HzB/lin+jMJF8K4blR6s9LpRY80l8hyaatAn8pQ2cUC4Z+IhechUIWA8yya7TMVB
-        oa5mnqlCQP84rWMqjtDAs/aJBuWGm5bLRo3/94lA2sQRxI1uMmPaxBGK8sd0AzwEz8hD7NE65sMxRa7B
-        BnpURZqYjkI1aPKo8QaeX9DoBTiAo3kz7IHGI3IPxovQfM3W0CaOjHgzExcxaGkjriyXGOYRivyr94Nl
-        jFdANflObiL/3uZK0mdarUnknXkMyi2Mt8HETLMwoReX3Zg0M10I1HywzzcinYi36FPhdA2cSLkPLoNT
-        ttJh6cKzndIcsKCrNNeVa+0aFniN0zVwUvkjE6fc0w023X1psQICR7XVjq7XfYN5B6fyCGb6uolMgEsY
-        r4JV/bamKckoxr8xN2njcWnD+JPV6amKmSsg8Cs/5z/A/CuanaLJAzwrHO+nbxgFRAsUK//5D0zjT43u
-        Tarz10VJus2kCBA/QdFRzqDGUzQcZ5OXzB2j5jbL6wPvohnwLQyyd9Ef8AD5XtP5G/WOFV1giPwFO1wJ
-        5YjPOZwAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="BunifuTileButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAklJREFUSEul
         VU1rE1EUvcVWbcGVSHXlrga67ErqR9DJmC7MwtA/0C7a+hWEunfTQFHqwl/gSrAUV4KBQuNCUSgUCiVt
@@ -148,7 +133,7 @@
         Tx6gWeuISRK/Qntf53B6eugxg8E4qH+Jr8EPpI41Nx4dxUSIHAJjHeUghMpxZAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BunifuTileButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnXoa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAO1JREFUSEvt
         lMsOgjAQRfkooS50Ae1CTXxE//8nKAVREu3VmcQgtLwWLDhJk05n5t70kQYL88TE65NJVnsKvaAWPRS6
@@ -158,7 +143,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BunifuTileButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnThem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAATFJREFUSEvt
         k71KQ0EQhY/4g1HE2kawEmJhY2ch6GtY2FpbWUQmCQHFYCUGX8FSEEWfQFCwC4goKSwDIhYqaDxz9zQB
