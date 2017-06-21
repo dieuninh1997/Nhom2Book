@@ -377,7 +377,7 @@ Partial Class Form1
         Me.btnTrangChu.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(114, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.btnTrangChu.OnHoverTextColor = System.Drawing.Color.White
         Me.btnTrangChu.selected = False
-        Me.btnTrangChu.Size = New System.Drawing.Size(241, 48)
+        Me.btnTrangChu.Size = New System.Drawing.Size(244, 48)
         Me.btnTrangChu.TabIndex = 5
         Me.btnTrangChu.Text = "Trang chủ"
         Me.btnTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -509,8 +509,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(1258, 708)
-        Me.Controls.Add(Me.FormKhachhang1)
         Me.Controls.Add(Me.FormHoadon1)
+        Me.Controls.Add(Me.FormKhachhang1)
         Me.Controls.Add(Me.FormPhieuNhap1)
         Me.Controls.Add(Me.FormNhanvien1)
         Me.Controls.Add(Me.FormNCC1)

@@ -28,23 +28,25 @@
 
                 Dim i As Integer = 2
                 .cells(1, 3).value = "Date: " + Format(Now, "MMM-dd-yyyy")
-                .cells(2, i).value = "No"
-                .cells(2, i).EntireRow.Font.Bold = True
+                .cells(2, 3).value = "Đơn vị tiền: nghìn VNĐ"
+                .cells(3, 3).value = "Ngày bán: MM/dd/yyyy"
+                .cells(4, i).value = "No"
+                .cells(4, i).EntireRow.Font.Bold = True
                 For col = 0 To arrListcol.Length - 1
                     i += 1
-                    .cells(2, i).value = arrListcol(col).ToUpper()
-                    .cells(2, i).EntireRow.Font.Name = "Times New Roman"
-                    .cells(2, i).EntireRow.Font.Size = 10
-                    .cells(2, i).EntireRow.Font.Bold = True
+                    .cells(4, i).value = arrListcol(col).ToUpper()
+                    .cells(4, i).EntireRow.Font.Name = "Times New Roman"
+                    .cells(4, i).EntireRow.Font.Size = 10
+                    .cells(4, i).EntireRow.Font.Bold = True
                 Next
                 i = 3
                 Dim k As Integer = 3
 
                 For col = 0 To _DataSet.Columns.Count - 1
-                    i = 3
+                    i = 5
 
                     For row = 0 To _DataSet.Rows.Count - 1
-                        .Cells(i, 2).Value = i - 2
+                        .Cells(i, 2).Value = i - 4
                         .Cells(i, k).Value = _DataSet.Rows(row).ItemArray(col)
                         i += 1
                     Next
