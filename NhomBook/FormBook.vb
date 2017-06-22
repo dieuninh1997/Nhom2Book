@@ -136,7 +136,7 @@
         lbTenSach.Visible = False
         txtTimKiem.Text = ""
 
-        txtTimKiem.HintText = "Tìm kiếm theo tên "
+        txtTimKiem.HintText = "Tìm kiếm "
 
 
 
@@ -300,12 +300,27 @@
 
     End Sub
     Private Sub txtTimKiem_OnValueChanged(sender As Object, e As EventArgs) Handles txtTimKiem.OnValueChanged
+        Dim _soluong As Integer
+        Dim sql As String
 
+        _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+        If txtTimKiem.Text.Length > 0 Then
+
+            sql = "searchSACH"
+            Name(0) = "@ma"
+            Value(0) = txtTimKiem.Text
+            dgSach.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+        Else
+            ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+            ShowData()
+
+        End If
+        lbSoluongSach.Text = dgSach.RowCount - 1
     End Sub
 
-    Private Sub btnDelSearch_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub btnDelSearch_Click_1(sender As Object, e As EventArgs) Handles btnDelSearch.Click
         txtTimKiem.Text = ""

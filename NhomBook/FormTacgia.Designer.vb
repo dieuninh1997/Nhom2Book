@@ -43,6 +43,8 @@ Partial Class FormTacgia
         Me.btnDelSearch = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.lbSoluongTacgia = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel5 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.cbSearch = New System.Windows.Forms.ComboBox()
         CType(Me.dgTacgia, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,7 +79,7 @@ Partial Class FormTacgia
         'BunifuCustomLabel2
         '
         Me.BunifuCustomLabel2.AutoSize = True
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(26, 108)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(33, 163)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(57, 13)
         Me.BunifuCustomLabel2.TabIndex = 3
@@ -86,7 +88,7 @@ Partial Class FormTacgia
         'txtMatacgia
         '
         Me.txtMatacgia.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtMatacgia.Location = New System.Drawing.Point(106, 105)
+        Me.txtMatacgia.Location = New System.Drawing.Point(106, 160)
         Me.txtMatacgia.Multiline = True
         Me.txtMatacgia.Name = "txtMatacgia"
         Me.txtMatacgia.Size = New System.Drawing.Size(293, 34)
@@ -95,7 +97,7 @@ Partial Class FormTacgia
         'BunifuCustomLabel1
         '
         Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(26, 180)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(29, 239)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(61, 13)
         Me.BunifuCustomLabel1.TabIndex = 14
@@ -104,7 +106,7 @@ Partial Class FormTacgia
         'txtTentacgia
         '
         Me.txtTentacgia.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtTentacgia.Location = New System.Drawing.Point(106, 177)
+        Me.txtTentacgia.Location = New System.Drawing.Point(106, 236)
         Me.txtTentacgia.Multiline = True
         Me.txtTentacgia.Name = "txtTentacgia"
         Me.txtTentacgia.Size = New System.Drawing.Size(293, 67)
@@ -113,7 +115,7 @@ Partial Class FormTacgia
         'BunifuCustomLabel3
         '
         Me.BunifuCustomLabel3.AutoSize = True
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(26, 283)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(26, 345)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(70, 13)
         Me.BunifuCustomLabel3.TabIndex = 16
@@ -122,7 +124,7 @@ Partial Class FormTacgia
         'txtSdtTacgia
         '
         Me.txtSdtTacgia.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtSdtTacgia.Location = New System.Drawing.Point(106, 280)
+        Me.txtSdtTacgia.Location = New System.Drawing.Point(106, 342)
         Me.txtSdtTacgia.Multiline = True
         Me.txtSdtTacgia.Name = "txtSdtTacgia"
         Me.txtSdtTacgia.Size = New System.Drawing.Size(293, 34)
@@ -160,7 +162,7 @@ Partial Class FormTacgia
         Me.btnUpdate.ImageZoom = 30
         Me.btnUpdate.LabelPosition = 20
         Me.btnUpdate.LabelText = "Update"
-        Me.btnUpdate.Location = New System.Drawing.Point(141, 360)
+        Me.btnUpdate.Location = New System.Drawing.Point(142, 456)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(6)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(59, 50)
@@ -179,7 +181,7 @@ Partial Class FormTacgia
         Me.btnXoa.ImageZoom = 40
         Me.btnXoa.LabelPosition = 20
         Me.btnXoa.LabelText = "Xóa"
-        Me.btnXoa.Location = New System.Drawing.Point(240, 360)
+        Me.btnXoa.Location = New System.Drawing.Point(231, 456)
         Me.btnXoa.Margin = New System.Windows.Forms.Padding(6)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(59, 50)
@@ -198,7 +200,7 @@ Partial Class FormTacgia
         Me.btnThem.ImageZoom = 40
         Me.btnThem.LabelPosition = 20
         Me.btnThem.LabelText = "Thêm"
-        Me.btnThem.Location = New System.Drawing.Point(340, 360)
+        Me.btnThem.Location = New System.Drawing.Point(322, 456)
         Me.btnThem.Margin = New System.Windows.Forms.Padding(6)
         Me.btnThem.Name = "btnThem"
         Me.btnThem.Size = New System.Drawing.Size(59, 50)
@@ -207,7 +209,7 @@ Partial Class FormTacgia
         'lbMaTacgia
         '
         Me.lbMaTacgia.AutoSize = True
-        Me.lbMaTacgia.Location = New System.Drawing.Point(116, 142)
+        Me.lbMaTacgia.Location = New System.Drawing.Point(116, 197)
         Me.lbMaTacgia.Name = "lbMaTacgia"
         Me.lbMaTacgia.Size = New System.Drawing.Size(19, 13)
         Me.lbMaTacgia.TabIndex = 57
@@ -217,7 +219,7 @@ Partial Class FormTacgia
         'lbTentacgia
         '
         Me.lbTentacgia.AutoSize = True
-        Me.lbTentacgia.Location = New System.Drawing.Point(116, 247)
+        Me.lbTentacgia.Location = New System.Drawing.Point(116, 306)
         Me.lbTentacgia.Name = "lbTentacgia"
         Me.lbTentacgia.Size = New System.Drawing.Size(19, 13)
         Me.lbTentacgia.TabIndex = 58
@@ -227,7 +229,7 @@ Partial Class FormTacgia
         'lbSdt
         '
         Me.lbSdt.AutoSize = True
-        Me.lbSdt.Location = New System.Drawing.Point(116, 317)
+        Me.lbSdt.Location = New System.Drawing.Point(116, 379)
         Me.lbSdt.Name = "lbSdt"
         Me.lbSdt.Size = New System.Drawing.Size(19, 13)
         Me.lbSdt.TabIndex = 59
@@ -247,7 +249,7 @@ Partial Class FormTacgia
         Me.btnNew.ImageZoom = 40
         Me.btnNew.LabelPosition = 20
         Me.btnNew.LabelText = "New"
-        Me.btnNew.Location = New System.Drawing.Point(48, 360)
+        Me.btnNew.Location = New System.Drawing.Point(50, 456)
         Me.btnNew.Margin = New System.Windows.Forms.Padding(6)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(59, 50)
@@ -284,11 +286,30 @@ Partial Class FormTacgia
         Me.lbSoluongTacgia.TabIndex = 70
         Me.lbSoluongTacgia.Text = "2"
         '
+        'BunifuCustomLabel5
+        '
+        Me.BunifuCustomLabel5.AutoSize = True
+        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(31, 78)
+        Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
+        Me.BunifuCustomLabel5.Size = New System.Drawing.Size(32, 13)
+        Me.BunifuCustomLabel5.TabIndex = 71
+        Me.BunifuCustomLabel5.Text = "Theo"
+        '
+        'cbSearch
+        '
+        Me.cbSearch.FormattingEnabled = True
+        Me.cbSearch.Location = New System.Drawing.Point(67, 75)
+        Me.cbSearch.Name = "cbSearch"
+        Me.cbSearch.Size = New System.Drawing.Size(195, 21)
+        Me.cbSearch.TabIndex = 72
+        '
         'FormTacgia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Controls.Add(Me.cbSearch)
+        Me.Controls.Add(Me.BunifuCustomLabel5)
         Me.Controls.Add(Me.lbSoluongTacgia)
         Me.Controls.Add(Me.BunifuCustomLabel4)
         Me.Controls.Add(Me.btnDelSearch)
@@ -334,4 +355,6 @@ Partial Class FormTacgia
     Friend WithEvents btnDelSearch As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents BunifuCustomLabel4 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents lbSoluongTacgia As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents BunifuCustomLabel5 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents cbSearch As ComboBox
 End Class

@@ -45,12 +45,15 @@ Partial Class FormPhieuNhap
         Me.lbNgaynhap = New System.Windows.Forms.Label()
         Me.lbTongtien = New System.Windows.Forms.Label()
         Me.btnNew = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.btnDelSearch = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.btnSearch = New Bunifu.Framework.UI.BunifuImageButton()
         Me.lbSoluongPhieuNhap = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel7 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.btnExcel = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuCustomLabel6 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.cbSearch = New System.Windows.Forms.ComboBox()
         Me.FormChiTietPN1 = New NhomBook.FormChiTietPN()
         CType(Me.dgPhieuNhap, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgPhieuNhap
@@ -92,7 +95,7 @@ Partial Class FormPhieuNhap
         Me.txtTimKiem.LineIdleColor = System.Drawing.Color.Gray
         Me.txtTimKiem.LineMouseHoverColor = System.Drawing.Color.Blue
         Me.txtTimKiem.LineThickness = 3
-        Me.txtTimKiem.Location = New System.Drawing.Point(36, 25)
+        Me.txtTimKiem.Location = New System.Drawing.Point(40, 38)
         Me.txtTimKiem.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTimKiem.Name = "txtTimKiem"
         Me.txtTimKiem.Size = New System.Drawing.Size(336, 44)
@@ -102,7 +105,7 @@ Partial Class FormPhieuNhap
         'BunifuCustomLabel2
         '
         Me.BunifuCustomLabel2.AutoSize = True
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(33, 115)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(37, 144)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(76, 13)
         Me.BunifuCustomLabel2.TabIndex = 26
@@ -111,7 +114,7 @@ Partial Class FormPhieuNhap
         'txtMapn
         '
         Me.txtMapn.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtMapn.Location = New System.Drawing.Point(124, 112)
+        Me.txtMapn.Location = New System.Drawing.Point(124, 141)
         Me.txtMapn.Multiline = True
         Me.txtMapn.Name = "txtMapn"
         Me.txtMapn.Size = New System.Drawing.Size(278, 34)
@@ -120,7 +123,7 @@ Partial Class FormPhieuNhap
         'BunifuCustomLabel1
         '
         Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(33, 186)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(41, 210)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(72, 13)
         Me.BunifuCustomLabel1.TabIndex = 28
@@ -129,7 +132,7 @@ Partial Class FormPhieuNhap
         'txtTongtien
         '
         Me.txtTongtien.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtTongtien.Location = New System.Drawing.Point(124, 295)
+        Me.txtTongtien.Location = New System.Drawing.Point(124, 313)
         Me.txtTongtien.Multiline = True
         Me.txtTongtien.Name = "txtTongtien"
         Me.txtTongtien.Size = New System.Drawing.Size(278, 34)
@@ -138,7 +141,7 @@ Partial Class FormPhieuNhap
         'BunifuCustomLabel3
         '
         Me.BunifuCustomLabel3.AutoSize = True
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(38, 240)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(50, 264)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(47, 13)
         Me.BunifuCustomLabel3.TabIndex = 30
@@ -147,7 +150,7 @@ Partial Class FormPhieuNhap
         'cbMancc
         '
         Me.cbMancc.FormattingEnabled = True
-        Me.cbMancc.Location = New System.Drawing.Point(124, 237)
+        Me.cbMancc.Location = New System.Drawing.Point(124, 261)
         Me.cbMancc.Name = "cbMancc"
         Me.cbMancc.Size = New System.Drawing.Size(278, 21)
         Me.cbMancc.TabIndex = 32
@@ -155,7 +158,7 @@ Partial Class FormPhieuNhap
         'cbManv
         '
         Me.cbManv.FormattingEnabled = True
-        Me.cbManv.Location = New System.Drawing.Point(124, 183)
+        Me.cbManv.Location = New System.Drawing.Point(124, 207)
         Me.cbManv.Name = "cbManv"
         Me.cbManv.Size = New System.Drawing.Size(278, 21)
         Me.cbManv.TabIndex = 33
@@ -163,7 +166,7 @@ Partial Class FormPhieuNhap
         'BunifuCustomLabel4
         '
         Me.BunifuCustomLabel4.AutoSize = True
-        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(38, 298)
+        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(45, 313)
         Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
         Me.BunifuCustomLabel4.Size = New System.Drawing.Size(52, 26)
         Me.BunifuCustomLabel4.TabIndex = 34
@@ -172,7 +175,7 @@ Partial Class FormPhieuNhap
         'BunifuCustomLabel5
         '
         Me.BunifuCustomLabel5.AutoSize = True
-        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(38, 372)
+        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(45, 391)
         Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
         Me.BunifuCustomLabel5.Size = New System.Drawing.Size(59, 13)
         Me.BunifuCustomLabel5.TabIndex = 35
@@ -180,7 +183,7 @@ Partial Class FormPhieuNhap
         '
         'dtpNgaynhap
         '
-        Me.dtpNgaynhap.Location = New System.Drawing.Point(124, 366)
+        Me.dtpNgaynhap.Location = New System.Drawing.Point(124, 388)
         Me.dtpNgaynhap.Name = "dtpNgaynhap"
         Me.dtpNgaynhap.Size = New System.Drawing.Size(278, 20)
         Me.dtpNgaynhap.TabIndex = 36
@@ -198,7 +201,7 @@ Partial Class FormPhieuNhap
         Me.btnXoa.ImageZoom = 40
         Me.btnXoa.LabelPosition = 20
         Me.btnXoa.LabelText = "Xóa"
-        Me.btnXoa.Location = New System.Drawing.Point(187, 443)
+        Me.btnXoa.Location = New System.Drawing.Point(185, 464)
         Me.btnXoa.Margin = New System.Windows.Forms.Padding(6)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(59, 50)
@@ -217,7 +220,7 @@ Partial Class FormPhieuNhap
         Me.btnThem.ImageZoom = 40
         Me.btnThem.LabelPosition = 20
         Me.btnThem.LabelText = "Thêm"
-        Me.btnThem.Location = New System.Drawing.Point(297, 537)
+        Me.btnThem.Location = New System.Drawing.Point(280, 544)
         Me.btnThem.Margin = New System.Windows.Forms.Padding(6)
         Me.btnThem.Name = "btnThem"
         Me.btnThem.Size = New System.Drawing.Size(59, 50)
@@ -236,7 +239,7 @@ Partial Class FormPhieuNhap
         Me.btnUpdate.ImageZoom = 30
         Me.btnUpdate.LabelPosition = 20
         Me.btnUpdate.LabelText = "Update"
-        Me.btnUpdate.Location = New System.Drawing.Point(89, 443)
+        Me.btnUpdate.Location = New System.Drawing.Point(89, 464)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(6)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(59, 50)
@@ -255,7 +258,7 @@ Partial Class FormPhieuNhap
         Me.btnDetail.ImageZoom = 40
         Me.btnDetail.LabelPosition = 20
         Me.btnDetail.LabelText = "Detail"
-        Me.btnDetail.Location = New System.Drawing.Point(187, 537)
+        Me.btnDetail.Location = New System.Drawing.Point(185, 544)
         Me.btnDetail.Margin = New System.Windows.Forms.Padding(6)
         Me.btnDetail.Name = "btnDetail"
         Me.btnDetail.Size = New System.Drawing.Size(59, 50)
@@ -264,7 +267,7 @@ Partial Class FormPhieuNhap
         'lbMapn
         '
         Me.lbMapn.AutoSize = True
-        Me.lbMapn.Location = New System.Drawing.Point(129, 149)
+        Me.lbMapn.Location = New System.Drawing.Point(129, 178)
         Me.lbMapn.Name = "lbMapn"
         Me.lbMapn.Size = New System.Drawing.Size(19, 13)
         Me.lbMapn.TabIndex = 61
@@ -274,7 +277,7 @@ Partial Class FormPhieuNhap
         'lbNgaynhap
         '
         Me.lbNgaynhap.AutoSize = True
-        Me.lbNgaynhap.Location = New System.Drawing.Point(129, 389)
+        Me.lbNgaynhap.Location = New System.Drawing.Point(129, 411)
         Me.lbNgaynhap.Name = "lbNgaynhap"
         Me.lbNgaynhap.Size = New System.Drawing.Size(19, 13)
         Me.lbNgaynhap.TabIndex = 63
@@ -284,7 +287,7 @@ Partial Class FormPhieuNhap
         'lbTongtien
         '
         Me.lbTongtien.AutoSize = True
-        Me.lbTongtien.Location = New System.Drawing.Point(129, 332)
+        Me.lbTongtien.Location = New System.Drawing.Point(129, 350)
         Me.lbTongtien.Name = "lbTongtien"
         Me.lbTongtien.Size = New System.Drawing.Size(19, 13)
         Me.lbTongtien.TabIndex = 64
@@ -304,24 +307,24 @@ Partial Class FormPhieuNhap
         Me.btnNew.ImageZoom = 40
         Me.btnNew.LabelPosition = 20
         Me.btnNew.LabelText = "New"
-        Me.btnNew.Location = New System.Drawing.Point(297, 443)
+        Me.btnNew.Location = New System.Drawing.Point(280, 464)
         Me.btnNew.Margin = New System.Windows.Forms.Padding(6)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(59, 50)
         Me.btnNew.TabIndex = 65
         '
-        'btnDelSearch
+        'btnSearch
         '
-        Me.btnDelSearch.BackColor = System.Drawing.Color.White
-        Me.btnDelSearch.Image = CType(resources.GetObject("btnDelSearch.Image"), System.Drawing.Image)
-        Me.btnDelSearch.ImageActive = CType(resources.GetObject("btnDelSearch.ImageActive"), System.Drawing.Image)
-        Me.btnDelSearch.Location = New System.Drawing.Point(372, 39)
-        Me.btnDelSearch.Name = "btnDelSearch"
-        Me.btnDelSearch.Size = New System.Drawing.Size(30, 30)
-        Me.btnDelSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.btnDelSearch.TabIndex = 68
-        Me.btnDelSearch.TabStop = False
-        Me.btnDelSearch.Zoom = 10
+        Me.btnSearch.BackColor = System.Drawing.Color.White
+        Me.btnSearch.Image = CType(resources.GetObject("btnSearch.Image"), System.Drawing.Image)
+        Me.btnSearch.ImageActive = CType(resources.GetObject("btnSearch.ImageActive"), System.Drawing.Image)
+        Me.btnSearch.Location = New System.Drawing.Point(383, 49)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(30, 30)
+        Me.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.btnSearch.TabIndex = 68
+        Me.btnSearch.TabStop = False
+        Me.btnSearch.Zoom = 10
         '
         'lbSoluongPhieuNhap
         '
@@ -341,11 +344,48 @@ Partial Class FormPhieuNhap
         Me.BunifuCustomLabel7.TabIndex = 70
         Me.BunifuCustomLabel7.Text = "Tất cả:"
         '
+        'btnExcel
+        '
+        Me.btnExcel.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnExcel.color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnExcel.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnExcel.Enabled = False
+        Me.btnExcel.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExcel.ForeColor = System.Drawing.Color.Black
+        Me.btnExcel.Image = CType(resources.GetObject("btnExcel.Image"), System.Drawing.Image)
+        Me.btnExcel.ImagePosition = 5
+        Me.btnExcel.ImageZoom = 40
+        Me.btnExcel.LabelPosition = 20
+        Me.btnExcel.LabelText = "In"
+        Me.btnExcel.Location = New System.Drawing.Point(89, 544)
+        Me.btnExcel.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnExcel.Name = "btnExcel"
+        Me.btnExcel.Size = New System.Drawing.Size(59, 50)
+        Me.btnExcel.TabIndex = 101
+        '
+        'BunifuCustomLabel6
+        '
+        Me.BunifuCustomLabel6.AutoSize = True
+        Me.BunifuCustomLabel6.Location = New System.Drawing.Point(41, 89)
+        Me.BunifuCustomLabel6.Name = "BunifuCustomLabel6"
+        Me.BunifuCustomLabel6.Size = New System.Drawing.Size(32, 13)
+        Me.BunifuCustomLabel6.TabIndex = 102
+        Me.BunifuCustomLabel6.Text = "Theo"
+        '
+        'cbSearch
+        '
+        Me.cbSearch.FormattingEnabled = True
+        Me.cbSearch.Location = New System.Drawing.Point(79, 86)
+        Me.cbSearch.Name = "cbSearch"
+        Me.cbSearch.Size = New System.Drawing.Size(208, 21)
+        Me.cbSearch.TabIndex = 103
+        '
         'FormChiTietPN1
         '
         Me.FormChiTietPN1.BackColor = System.Drawing.Color.White
         Me.FormChiTietPN1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.FormChiTietPN1.Location = New System.Drawing.Point(0, 0)
+        Me.FormChiTietPN1.Location = New System.Drawing.Point(383, 198)
         Me.FormChiTietPN1.Name = "FormChiTietPN1"
         Me.FormChiTietPN1.Size = New System.Drawing.Size(1016, 670)
         Me.FormChiTietPN1.TabIndex = 71
@@ -355,10 +395,13 @@ Partial Class FormPhieuNhap
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.cbSearch)
+        Me.Controls.Add(Me.BunifuCustomLabel6)
+        Me.Controls.Add(Me.btnExcel)
         Me.Controls.Add(Me.FormChiTietPN1)
         Me.Controls.Add(Me.BunifuCustomLabel7)
         Me.Controls.Add(Me.lbSoluongPhieuNhap)
-        Me.Controls.Add(Me.btnDelSearch)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.lbTongtien)
         Me.Controls.Add(Me.lbNgaynhap)
@@ -382,7 +425,7 @@ Partial Class FormPhieuNhap
         Me.Name = "FormPhieuNhap"
         Me.Size = New System.Drawing.Size(1014, 657)
         CType(Me.dgPhieuNhap, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -408,8 +451,11 @@ Partial Class FormPhieuNhap
     Friend WithEvents lbNgaynhap As Label
     Friend WithEvents lbTongtien As Label
     Friend WithEvents btnNew As Bunifu.Framework.UI.BunifuTileButton
-    Friend WithEvents btnDelSearch As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents btnSearch As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents lbSoluongPhieuNhap As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel7 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents FormChiTietPN1 As FormChiTietPN
+    Friend WithEvents btnExcel As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents BunifuCustomLabel6 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents cbSearch As ComboBox
 End Class

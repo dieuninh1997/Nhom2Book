@@ -99,7 +99,7 @@
         lbTongtien.Visible = False
         lbNgaynhap.Visible = False
         txtTimKiem.Text = ""
-        txtTimKiem.HintText = "Tìm kiếm theo số phiếu nhập "
+        txtTimKiem.HintText = "Tìm kiếm  "
         'load dg
         ShowData()
         NameHeaderDgv()
@@ -108,7 +108,7 @@
         loadNv()
         sl = dgPhieuNhap.Rows.Count - 1
         lbSoluongPhieuNhap.Text = sl.ToString
-
+        LoadDataOnCbSearchTheo()
     End Sub
 
 
@@ -135,10 +135,7 @@
         End If
     End Sub
 
-    Private Sub btnDelSearch_Click(sender As Object, e As EventArgs) Handles btnDelSearch.Click
-        txtTimKiem.Text = ""
-        txtTimKiem.HintText = "Tìm kiếm theo số phiếu nhập "
-    End Sub
+
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If (String.IsNullOrEmpty(txtMapn.Text)) OrElse (String.IsNullOrEmpty(txtTongtien.Text)) Then
@@ -244,4 +241,120 @@
         FormChiTietPN1.lbMapn.Text = txtMapn.Text
     End Sub
 
+    Private Sub LoadDataOnCbSearchTheo()
+        Dim DT As DataTable = New DataTable()
+        DT.Columns.Add("Name")
+
+
+        DT.Rows.Add("Mã phiếu nhập")
+        DT.Rows.Add("Mã nhân viên")
+        DT.Rows.Add("Mã nhà cc")
+        DT.Rows.Add("Ngày nhập")
+        DT.Rows.Add("Tổng tiền (trong khoảng a-b)")
+        cbSearch.DataSource = DT
+        cbSearch.DisplayMember = "Name"
+        cbSearch.ValueMember = "Name"
+    End Sub
+
+    Private Sub txtTimKiem_OnValueChanged(sender As Object, e As EventArgs) Handles txtTimKiem.OnValueChanged
+        Dim _soluong As Integer
+        Dim sql As String
+
+        If cbSearch.SelectedValue = "Mã phiếu nhập" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiem.Text.Length > 0 Then
+
+                sql = "searchIDPHIEUNHAP"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiem.Text
+                dgPhieuNhap.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+                End
+            End If
+        ElseIf cbSearch.SelectedValue = "Mã nhân viên" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiem.Text.Length > 0 Then
+
+                sql = "searchIDNv"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiem.Text
+                dgPhieuNhap.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+                End
+            End If
+        ElseIf cbSearch.SelectedValue = "Mã nhà cc" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiem.Text.Length > 0 Then
+
+                sql = "searchIDNcc"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiem.Text
+                dgPhieuNhap.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+                End
+            End If
+
+        End If
+        lbSoluongPhieuNhap.Text = dgPhieuNhap.RowCount - 1
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim _soluong As Integer
+        Dim sql As String
+
+        If cbSearch.SelectedValue = "Ngày nhập" Then
+            If txtTimKiem.Text.Length > 0 Then
+                Dim Mang() As String
+
+                If (txtTimKiem.Text.Trim().Length = 7 Or txtTimKiem.Text.Trim().Length = 6) Then
+                    sql = "searchNgayNhap2"
+                    Mang = txtTimKiem.Text.Split("/")
+                    _soluong = 1
+                    Dim Value(_soluong) As String
+                    Dim Name(_soluong) As String
+
+
+                    Name(0) = "@m"
+                    Value(0) = Mang(0)
+                    Name(1) = "@y"
+                    Value(1) = Mang(1)
+                    dgPhieuNhap.DataSource = kn.checkID(sql, Name, Value, _soluong)
+                ElseIf (txtTimKiem.Text.Trim().Length > 7)
+                    sql = "searchNgayNhap"
+                    Mang = txtTimKiem.Text.Split("/")
+                    _soluong = 2
+                    Dim Value(_soluong) As String
+                    Dim Name(_soluong) As String
+
+                    Name(0) = "@d"
+                    Value(0) = Mang(0)
+                    Name(1) = "@m"
+                    Value(1) = Mang(1)
+                    Name(2) = "@y"
+                    Value(2) = Mang(2)
+                    dgPhieuNhap.DataSource = kn.checkID(sql, Name, Value, _soluong)
+                Else
+                    ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                    ShowData()
+                    End
+                End If
+            End If
+        End If
+        lbSoluongPhieuNhap.Text = dgPhieuNhap.RowCount - 1
+    End Sub
 End Class

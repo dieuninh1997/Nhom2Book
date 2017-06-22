@@ -36,7 +36,7 @@
         NameHeaderDgv()
         sl = dgNCC.Rows.Count - 1
         lbSoluongNCC.Text = sl.ToString
-
+        LoadDataOnCbSearch()
 
     End Sub
     Public Function ktrID(ByVal Id As String) As DataTable
@@ -213,14 +213,86 @@
 
     End Sub
     Private Sub txtTimKiemncc_OnValueChanged(sender As Object, e As EventArgs) Handles txtTimKiemNCC.OnValueChanged
-        If String.IsNullOrEmpty(txtTimKiemNCC.Text) Then
-            ShowData()
+        Dim _soluong As Integer
+        Dim sql As String
+
+        If cbSearch.SelectedValue = "Mã nhà cc" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiemNCC.Text.Length > 0 Then
+
+                sql = "searchIDNHACC"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiemNCC.Text
+                dgNCC.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+            End If
+        ElseIf cbSearch.SelectedValue = "Tên nhà cc" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiemNCC.Text.Length > 0 Then
+
+                sql = "searchTenNHACC"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiemNCC.Text
+                dgNCC.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+            End If
+        ElseIf cbSearch.SelectedValue = "Địa chỉ" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiemNCC.Text.Length > 0 Then
+
+                sql = "searchDcNHACC"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiemNCC.Text
+                dgNCC.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+            End If
+
+        ElseIf cbSearch.SelectedValue = "Số điện thoại" Then
+        _soluong = 0
+        Dim Value(_soluong) As String
+        Dim Name(_soluong) As String
+        If txtTimKiemNCC.Text.Length > 0 Then
+
+                sql = "searchSdtNHACC"
+                Name(0) = "@ma"
+            Value(0) = txtTimKiemNCC.Text
+            dgNCC.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
         Else
-
-
+            ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+            ShowData()
         End If
+        End If
+        lbSoluongNCC.Text = dgNCC.RowCount - 1
     End Sub
+    Private Sub LoadDataOnCbSearch()
+        Dim DT As DataTable = New DataTable()
+        DT.Columns.Add("Name")
 
+
+        DT.Rows.Add("Mã nhà cc")
+        DT.Rows.Add("Tên nhà cc")
+        DT.Rows.Add("Địa chỉ")
+        DT.Rows.Add("Số điện thoại")
+        cbSearch.DataSource = DT
+        cbSearch.DisplayMember = "Name"
+        cbSearch.ValueMember = "Name"
+    End Sub
     Private Sub btnDelSearch_Click(sender As Object, e As EventArgs) Handles btnDelSearch.Click
         txtTimKiemNCC.Text = ""
         txtTimKiemNCC.HintText = "Tìm kiếm theo tên nhà cung cấp"

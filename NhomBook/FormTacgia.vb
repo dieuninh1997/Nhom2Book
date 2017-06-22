@@ -35,7 +35,7 @@
         NameHeaderDgv()
         sl = dgTacgia.Rows.Count - 1
         lbSoluongTacgia.Text = sl.ToString
-
+        LoadDataOnCbSearch()
 
 
     End Sub
@@ -206,16 +206,73 @@
     End Sub
 
     Private Sub txtTimKiemTg_OnValueChanged(sender As Object, e As EventArgs) Handles txtTimKiemTg.OnValueChanged
-        If String.IsNullOrEmpty(txtTimKiemTg.Text) Then
-            ShowData()
-        Else
+        Dim _soluong As Integer
+        Dim sql As String
 
+        If cbSearch.SelectedValue = "Mã tác giả" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiemTg.Text.Length > 0 Then
 
+                sql = "searchIDTACGIA"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiemTg.Text
+                dgTacgia.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+            End If
+        ElseIf cbSearch.SelectedValue = "Tên tác giả" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiemTg.Text.Length > 0 Then
+
+                sql = "searchTenTACGIA"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiemTg.Text
+                dgTacgia.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+            End If
+        ElseIf cbSearch.SelectedValue = "Số điện thoại" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimKiemTg.Text.Length > 0 Then
+
+                sql = "searchSdtTACGIA"
+                Name(0) = "@ma"
+                Value(0) = txtTimKiemTg.Text
+                dgTacgia.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+            End If
         End If
+        lbSoluongTacgia.Text = dgTacgia.RowCount - 1
     End Sub
 
     Private Sub btnDelSearch_Click(sender As Object, e As EventArgs) Handles btnDelSearch.Click
         txtTimKiemTg.Text = ""
         txtTimKiemTg.HintText = "Tìm kiếm theo tên tác giả"
+    End Sub
+
+    Private Sub LoadDataOnCbSearch()
+        Dim DT As DataTable = New DataTable()
+        DT.Columns.Add("Name")
+
+
+        DT.Rows.Add("Mã tác giả")
+        DT.Rows.Add("Tên tác giả")
+        DT.Rows.Add("Số điện thoại")
+        cbSearch.DataSource = DT
+        cbSearch.DisplayMember = "Name"
+        cbSearch.ValueMember = "Name"
     End Sub
 End Class

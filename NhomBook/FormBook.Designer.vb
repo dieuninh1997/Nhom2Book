@@ -469,18 +469,18 @@ Partial Class FormBook
         'FormTacgia1
         '
         Me.FormTacgia1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.FormTacgia1.Location = New System.Drawing.Point(0, 65)
+        Me.FormTacgia1.Location = New System.Drawing.Point(0, 64)
         Me.FormTacgia1.Name = "FormTacgia1"
         Me.FormTacgia1.Size = New System.Drawing.Size(1014, 596)
-        Me.FormTacgia1.TabIndex = 67
+        Me.FormTacgia1.TabIndex = 68
         '
         'FormTheLoai1
         '
         Me.FormTheLoai1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.FormTheLoai1.Location = New System.Drawing.Point(0, 65)
+        Me.FormTheLoai1.Location = New System.Drawing.Point(0, 67)
         Me.FormTheLoai1.Name = "FormTheLoai1"
-        Me.FormTheLoai1.Size = New System.Drawing.Size(1014, 657)
-        Me.FormTheLoai1.TabIndex = 68
+        Me.FormTheLoai1.Size = New System.Drawing.Size(1014, 596)
+        Me.FormTheLoai1.TabIndex = 67
         '
         'FormBook
         '
@@ -522,7 +522,7 @@ Partial Class FormBook
         Me.Controls.Add(Me.dgSach)
         Me.Controls.Add(Me.panelTop)
         Me.Name = "FormBook"
-        Me.Size = New System.Drawing.Size(980, 630)
+        Me.Size = New System.Drawing.Size(895, 545)
         Me.panelTop.ResumeLayout(False)
         CType(Me.dgSach, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).EndInit()

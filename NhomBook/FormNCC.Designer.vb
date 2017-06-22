@@ -22,8 +22,8 @@ Partial Class FormNCC
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormNCC))
         Me.dgNCC = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
@@ -46,27 +46,29 @@ Partial Class FormNCC
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.lbSoluongNCC = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel6 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel5 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.cbSearch = New System.Windows.Forms.ComboBox()
         CType(Me.dgNCC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgNCC
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dgNCC.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dgNCC.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgNCC.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgNCC.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dgNCC.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgNCC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgNCC.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgNCC.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgNCC.DoubleBuffered = True
         Me.dgNCC.EnableHeadersVisualStyles = False
@@ -81,7 +83,7 @@ Partial Class FormNCC
         'BunifuCustomLabel2
         '
         Me.BunifuCustomLabel2.AutoSize = True
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(49, 95)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(49, 141)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(47, 13)
         Me.BunifuCustomLabel2.TabIndex = 4
@@ -90,7 +92,7 @@ Partial Class FormNCC
         'txtMaNCC
         '
         Me.txtMaNCC.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtMaNCC.Location = New System.Drawing.Point(102, 92)
+        Me.txtMaNCC.Location = New System.Drawing.Point(106, 138)
         Me.txtMaNCC.Multiline = True
         Me.txtMaNCC.Name = "txtMaNCC"
         Me.txtMaNCC.Size = New System.Drawing.Size(321, 34)
@@ -99,7 +101,7 @@ Partial Class FormNCC
         'txtTenNCC
         '
         Me.txtTenNCC.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtTenNCC.Location = New System.Drawing.Point(106, 161)
+        Me.txtTenNCC.Location = New System.Drawing.Point(106, 214)
         Me.txtTenNCC.Multiline = True
         Me.txtTenNCC.Name = "txtTenNCC"
         Me.txtTenNCC.Size = New System.Drawing.Size(317, 78)
@@ -108,7 +110,7 @@ Partial Class FormNCC
         'BunifuCustomLabel3
         '
         Me.BunifuCustomLabel3.AutoSize = True
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(56, 280)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(56, 338)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(40, 13)
         Me.BunifuCustomLabel3.TabIndex = 17
@@ -117,7 +119,7 @@ Partial Class FormNCC
         'txtDiachi
         '
         Me.txtDiachi.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtDiachi.Location = New System.Drawing.Point(106, 277)
+        Me.txtDiachi.Location = New System.Drawing.Point(106, 335)
         Me.txtDiachi.Multiline = True
         Me.txtDiachi.Name = "txtDiachi"
         Me.txtDiachi.Size = New System.Drawing.Size(317, 77)
@@ -126,7 +128,7 @@ Partial Class FormNCC
         'BunifuCustomLabel4
         '
         Me.BunifuCustomLabel4.AutoSize = True
-        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(56, 395)
+        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(56, 454)
         Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
         Me.BunifuCustomLabel4.Size = New System.Drawing.Size(29, 13)
         Me.BunifuCustomLabel4.TabIndex = 19
@@ -135,7 +137,7 @@ Partial Class FormNCC
         'txtSdt
         '
         Me.txtSdt.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtSdt.Location = New System.Drawing.Point(106, 392)
+        Me.txtSdt.Location = New System.Drawing.Point(106, 451)
         Me.txtSdt.Multiline = True
         Me.txtSdt.Name = "txtSdt"
         Me.txtSdt.Size = New System.Drawing.Size(317, 34)
@@ -153,7 +155,7 @@ Partial Class FormNCC
         Me.txtTimKiemNCC.LineIdleColor = System.Drawing.Color.Gray
         Me.txtTimKiemNCC.LineMouseHoverColor = System.Drawing.Color.Blue
         Me.txtTimKiemNCC.LineThickness = 3
-        Me.txtTimKiemNCC.Location = New System.Drawing.Point(52, 17)
+        Me.txtTimKiemNCC.Location = New System.Drawing.Point(52, 31)
         Me.txtTimKiemNCC.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTimKiemNCC.Name = "txtTimKiemNCC"
         Me.txtTimKiemNCC.Size = New System.Drawing.Size(334, 44)
@@ -173,7 +175,7 @@ Partial Class FormNCC
         Me.btnUpdate.ImageZoom = 30
         Me.btnUpdate.LabelPosition = 20
         Me.btnUpdate.LabelText = "Update"
-        Me.btnUpdate.Location = New System.Drawing.Point(212, 462)
+        Me.btnUpdate.Location = New System.Drawing.Point(59, 541)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(6)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(59, 50)
@@ -192,7 +194,7 @@ Partial Class FormNCC
         Me.btnXoa.ImageZoom = 40
         Me.btnXoa.LabelPosition = 20
         Me.btnXoa.LabelText = "Xóa"
-        Me.btnXoa.Location = New System.Drawing.Point(327, 462)
+        Me.btnXoa.Location = New System.Drawing.Point(147, 541)
         Me.btnXoa.Margin = New System.Windows.Forms.Padding(6)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(59, 50)
@@ -211,7 +213,7 @@ Partial Class FormNCC
         Me.btnThem.ImageZoom = 40
         Me.btnThem.LabelPosition = 20
         Me.btnThem.LabelText = "Thêm"
-        Me.btnThem.Location = New System.Drawing.Point(327, 541)
+        Me.btnThem.Location = New System.Drawing.Point(235, 541)
         Me.btnThem.Margin = New System.Windows.Forms.Padding(6)
         Me.btnThem.Name = "btnThem"
         Me.btnThem.Size = New System.Drawing.Size(59, 50)
@@ -230,7 +232,7 @@ Partial Class FormNCC
         Me.btnNew.ImageZoom = 40
         Me.btnNew.LabelPosition = 20
         Me.btnNew.LabelText = "New"
-        Me.btnNew.Location = New System.Drawing.Point(212, 541)
+        Me.btnNew.Location = New System.Drawing.Point(327, 541)
         Me.btnNew.Margin = New System.Windows.Forms.Padding(6)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(59, 50)
@@ -241,7 +243,7 @@ Partial Class FormNCC
         Me.btnDelSearch.BackColor = System.Drawing.Color.White
         Me.btnDelSearch.Image = CType(resources.GetObject("btnDelSearch.Image"), System.Drawing.Image)
         Me.btnDelSearch.ImageActive = CType(resources.GetObject("btnDelSearch.ImageActive"), System.Drawing.Image)
-        Me.btnDelSearch.Location = New System.Drawing.Point(393, 31)
+        Me.btnDelSearch.Location = New System.Drawing.Point(393, 45)
         Me.btnDelSearch.Name = "btnDelSearch"
         Me.btnDelSearch.Size = New System.Drawing.Size(30, 30)
         Me.btnDelSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -252,7 +254,7 @@ Partial Class FormNCC
         'lbMaNCC
         '
         Me.lbMaNCC.AutoSize = True
-        Me.lbMaNCC.Location = New System.Drawing.Point(116, 129)
+        Me.lbMaNCC.Location = New System.Drawing.Point(116, 175)
         Me.lbMaNCC.Name = "lbMaNCC"
         Me.lbMaNCC.Size = New System.Drawing.Size(19, 13)
         Me.lbMaNCC.TabIndex = 69
@@ -262,7 +264,7 @@ Partial Class FormNCC
         'lbTenNCC
         '
         Me.lbTenNCC.AutoSize = True
-        Me.lbTenNCC.Location = New System.Drawing.Point(116, 242)
+        Me.lbTenNCC.Location = New System.Drawing.Point(125, 295)
         Me.lbTenNCC.Name = "lbTenNCC"
         Me.lbTenNCC.Size = New System.Drawing.Size(19, 13)
         Me.lbTenNCC.TabIndex = 70
@@ -272,7 +274,7 @@ Partial Class FormNCC
         'lbDiachi
         '
         Me.lbDiachi.AutoSize = True
-        Me.lbDiachi.Location = New System.Drawing.Point(116, 357)
+        Me.lbDiachi.Location = New System.Drawing.Point(116, 415)
         Me.lbDiachi.Name = "lbDiachi"
         Me.lbDiachi.Size = New System.Drawing.Size(19, 13)
         Me.lbDiachi.TabIndex = 71
@@ -282,7 +284,7 @@ Partial Class FormNCC
         'lbSdt
         '
         Me.lbSdt.AutoSize = True
-        Me.lbSdt.Location = New System.Drawing.Point(116, 429)
+        Me.lbSdt.Location = New System.Drawing.Point(116, 488)
         Me.lbSdt.Name = "lbSdt"
         Me.lbSdt.Size = New System.Drawing.Size(19, 13)
         Me.lbSdt.TabIndex = 72
@@ -292,7 +294,7 @@ Partial Class FormNCC
         'BunifuCustomLabel1
         '
         Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(49, 164)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(49, 217)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(51, 13)
         Me.BunifuCustomLabel1.TabIndex = 15
@@ -316,11 +318,30 @@ Partial Class FormNCC
         Me.BunifuCustomLabel6.TabIndex = 74
         Me.BunifuCustomLabel6.Text = "Tất cả:"
         '
+        'BunifuCustomLabel5
+        '
+        Me.BunifuCustomLabel5.AutoSize = True
+        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(51, 81)
+        Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
+        Me.BunifuCustomLabel5.Size = New System.Drawing.Size(32, 13)
+        Me.BunifuCustomLabel5.TabIndex = 75
+        Me.BunifuCustomLabel5.Text = "Theo"
+        '
+        'cbSearch
+        '
+        Me.cbSearch.FormattingEnabled = True
+        Me.cbSearch.Location = New System.Drawing.Point(91, 78)
+        Me.cbSearch.Name = "cbSearch"
+        Me.cbSearch.Size = New System.Drawing.Size(222, 21)
+        Me.cbSearch.TabIndex = 76
+        '
         'FormNCC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.cbSearch)
+        Me.Controls.Add(Me.BunifuCustomLabel5)
         Me.Controls.Add(Me.BunifuCustomLabel6)
         Me.Controls.Add(Me.lbSoluongNCC)
         Me.Controls.Add(Me.lbSdt)
@@ -372,4 +393,6 @@ Partial Class FormNCC
     Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents lbSoluongNCC As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel6 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents BunifuCustomLabel5 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents cbSearch As ComboBox
 End Class

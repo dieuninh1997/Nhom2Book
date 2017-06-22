@@ -6,10 +6,18 @@ Public Class KetNoi
     Public con As New SqlConnection(connectString)
     Public Sub OpenConnect()
         '  con = New SqlConnection("Data Source=DESKTOP-R7TCLO5;Initial Catalog=quanlysach;Integrated Security=True")
-        con.Open()
-        If con.State = ConnectionState.Open Then
-            con.Close()
-        End If
+        Try
+            con.Open()
+
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+
+        Finally
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+        End Try
+
     End Sub
     Public Function CloseConnect()
         If con.State = ConnectionState.Open Then

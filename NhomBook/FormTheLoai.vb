@@ -78,6 +78,7 @@
 
         sl = dgTheloai.Rows.Count - 1
         lbSoluongTheLoai.Text = sl.ToString
+        LoadDataOnCbSearch()
     End Sub
 
 
@@ -180,8 +181,55 @@
     End Sub
 
     Private Sub txtTimkiemTheloai_OnValueChanged(sender As Object, e As EventArgs) Handles txtTimkiemTheloai.OnValueChanged
+        Dim _soluong As Integer
+        Dim sql As String
+
+        If cbSearch.SelectedValue = "Mã thể loại" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimkiemTheloai.Text.Length > 0 Then
+
+                sql = "searchIDTHELOAI"
+                Name(0) = "@ma"
+                Value(0) = txtTimkiemTheloai.Text
+                dgTheloai.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+            End If
+        ElseIf cbSearch.SelectedValue = "Tên thể loại" Then
+            _soluong = 0
+            Dim Value(_soluong) As String
+            Dim Name(_soluong) As String
+            If txtTimkiemTheloai.Text.Length > 0 Then
+
+                sql = "searchTenTHELOAI"
+                Name(0) = "@ma"
+                Value(0) = txtTimkiemTheloai.Text
+                dgTheloai.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+            Else
+                ' txtTimKiemnhanvien.HintText = "Tìm kiếm "
+                ShowData()
+            End If
+        End If
+        lbSoluongTheLoai.Text = dgTheloai.RowCount - 1
+    End Sub
+    Private Sub LoadDataOnCbSearch()
+        Dim DT As DataTable = New DataTable()
+        DT.Columns.Add("Name")
+
+
+        DT.Rows.Add("Mã thể loại")
+        DT.Rows.Add("Tên thể loại")
+
+        cbSearch.DataSource = DT
+        cbSearch.DisplayMember = "Name"
+        cbSearch.ValueMember = "Name"
+    End Sub
+    Private Sub cbSearch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSearch.SelectedIndexChanged
 
     End Sub
-
-
 End Class

@@ -40,6 +40,9 @@ Partial Class FormTheLoai
         Me.btnDelSearch = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.lbSoluongTheLoai = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.cbSearch = New System.Windows.Forms.ComboBox()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         CType(Me.dgTheloai, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -95,7 +98,7 @@ Partial Class FormTheLoai
         'BunifuCustomLabel2
         '
         Me.BunifuCustomLabel2.AutoSize = True
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(35, 111)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(35, 146)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(59, 13)
         Me.BunifuCustomLabel2.TabIndex = 26
@@ -104,7 +107,7 @@ Partial Class FormTheLoai
         'txtMaTheloai
         '
         Me.txtMaTheloai.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtMaTheloai.Location = New System.Drawing.Point(100, 108)
+        Me.txtMaTheloai.Location = New System.Drawing.Point(100, 143)
         Me.txtMaTheloai.Multiline = True
         Me.txtMaTheloai.Name = "txtMaTheloai"
         Me.txtMaTheloai.Size = New System.Drawing.Size(293, 34)
@@ -113,7 +116,7 @@ Partial Class FormTheLoai
         'BunifuCustomLabel1
         '
         Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(35, 173)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(35, 216)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(63, 13)
         Me.BunifuCustomLabel1.TabIndex = 28
@@ -122,7 +125,7 @@ Partial Class FormTheLoai
         'txtTentheloai
         '
         Me.txtTentheloai.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtTentheloai.Location = New System.Drawing.Point(100, 170)
+        Me.txtTentheloai.Location = New System.Drawing.Point(100, 213)
         Me.txtTentheloai.Multiline = True
         Me.txtTentheloai.Name = "txtTentheloai"
         Me.txtTentheloai.Size = New System.Drawing.Size(293, 34)
@@ -141,7 +144,7 @@ Partial Class FormTheLoai
         Me.btnThem.ImageZoom = 40
         Me.btnThem.LabelPosition = 20
         Me.btnThem.LabelText = "Thêm"
-        Me.btnThem.Location = New System.Drawing.Point(334, 263)
+        Me.btnThem.Location = New System.Drawing.Point(311, 296)
         Me.btnThem.Margin = New System.Windows.Forms.Padding(6)
         Me.btnThem.Name = "btnThem"
         Me.btnThem.Size = New System.Drawing.Size(59, 50)
@@ -160,7 +163,7 @@ Partial Class FormTheLoai
         Me.btnXoa.ImageZoom = 40
         Me.btnXoa.LabelPosition = 20
         Me.btnXoa.LabelText = "Xóa"
-        Me.btnXoa.Location = New System.Drawing.Point(241, 263)
+        Me.btnXoa.Location = New System.Drawing.Point(227, 296)
         Me.btnXoa.Margin = New System.Windows.Forms.Padding(6)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(59, 50)
@@ -179,7 +182,7 @@ Partial Class FormTheLoai
         Me.btnUpdate.ImageZoom = 30
         Me.btnUpdate.LabelPosition = 20
         Me.btnUpdate.LabelText = "Update"
-        Me.btnUpdate.Location = New System.Drawing.Point(149, 263)
+        Me.btnUpdate.Location = New System.Drawing.Point(140, 296)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(6)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(59, 50)
@@ -188,7 +191,7 @@ Partial Class FormTheLoai
         'lbMatheloai
         '
         Me.lbMatheloai.AutoSize = True
-        Me.lbMatheloai.Location = New System.Drawing.Point(112, 145)
+        Me.lbMatheloai.Location = New System.Drawing.Point(112, 180)
         Me.lbMatheloai.Name = "lbMatheloai"
         Me.lbMatheloai.Size = New System.Drawing.Size(19, 13)
         Me.lbMatheloai.TabIndex = 60
@@ -198,7 +201,7 @@ Partial Class FormTheLoai
         'lbTentheloai
         '
         Me.lbTentheloai.AutoSize = True
-        Me.lbTentheloai.Location = New System.Drawing.Point(112, 207)
+        Me.lbTentheloai.Location = New System.Drawing.Point(112, 250)
         Me.lbTentheloai.Name = "lbTentheloai"
         Me.lbTentheloai.Size = New System.Drawing.Size(19, 13)
         Me.lbTentheloai.TabIndex = 61
@@ -218,7 +221,7 @@ Partial Class FormTheLoai
         Me.btnNew.ImageZoom = 40
         Me.btnNew.LabelPosition = 20
         Me.btnNew.LabelText = "New"
-        Me.btnNew.Location = New System.Drawing.Point(60, 263)
+        Me.btnNew.Location = New System.Drawing.Point(54, 296)
         Me.btnNew.Margin = New System.Windows.Forms.Padding(6)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(59, 50)
@@ -226,7 +229,7 @@ Partial Class FormTheLoai
         '
         'btnDelSearch
         '
-        Me.btnDelSearch.BackColor = System.Drawing.Color.White
+        Me.btnDelSearch.BackColor = System.Drawing.Color.WhiteSmoke
         Me.btnDelSearch.Image = CType(resources.GetObject("btnDelSearch.Image"), System.Drawing.Image)
         Me.btnDelSearch.ImageActive = CType(resources.GetObject("btnDelSearch.ImageActive"), System.Drawing.Image)
         Me.btnDelSearch.Location = New System.Drawing.Point(363, 49)
@@ -255,11 +258,30 @@ Partial Class FormTheLoai
         Me.lbSoluongTheLoai.TabIndex = 69
         Me.lbSoluongTheLoai.Text = "2"
         '
+        'BunifuCustomLabel4
+        '
+        Me.BunifuCustomLabel4.AutoSize = True
+        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(42, 88)
+        Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
+        Me.BunifuCustomLabel4.Size = New System.Drawing.Size(32, 13)
+        Me.BunifuCustomLabel4.TabIndex = 70
+        Me.BunifuCustomLabel4.Text = "Theo"
+        '
+        'cbSearch
+        '
+        Me.cbSearch.FormattingEnabled = True
+        Me.cbSearch.Location = New System.Drawing.Point(76, 84)
+        Me.cbSearch.Name = "cbSearch"
+        Me.cbSearch.Size = New System.Drawing.Size(191, 21)
+        Me.cbSearch.TabIndex = 71
+        '
         'FormTheLoai
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Controls.Add(Me.cbSearch)
+        Me.Controls.Add(Me.BunifuCustomLabel4)
         Me.Controls.Add(Me.lbSoluongTheLoai)
         Me.Controls.Add(Me.BunifuCustomLabel3)
         Me.Controls.Add(Me.btnDelSearch)
@@ -299,4 +321,7 @@ Partial Class FormTheLoai
     Friend WithEvents btnDelSearch As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents lbSoluongTheLoai As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents BunifuCustomLabel4 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents cbSearch As ComboBox
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class
