@@ -6,12 +6,13 @@
     Dim directory As String = My.Application.Info.DirectoryPath
 
     Private Sub FormChitietHD_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        loadMas()
+        loadDvt()
     End Sub
 
     Private Sub ClearText()
-        txtMaHD.Text = ""
-        txtSoluong.Text = ""
+        txtSoLuong.Text = ""
+        txtDonGia.Text = ""
     End Sub
 
 
@@ -45,7 +46,7 @@
         dgChitietHd.Columns("mahd").HeaderText = "Mã hóa đơn"
         dgChitietHd.Columns("mas").HeaderText = "Mã sách"
         dgChitietHd.Columns("soluong").HeaderText = "Số lượng"
-        dgChitietHd.Columns("dongia").HeaderText = "Đơn giá"
+        dgChitietHd.Columns("giaban").HeaderText = "Giá bán"
         dgChitietHd.Columns("giamgia").HeaderText = "Giảm giá"
 
         dgChitietHd.Columns("thanhtien").HeaderText = "Thành tiền"
@@ -54,7 +55,7 @@
     Private Sub btnInHd_Click(sender As Object, e As EventArgs) Handles btnInHd.Click
         Dim SaveFileDialog1 As SaveFileDialog = New SaveFileDialog()
 
-        Dim colName As String = "Mã hóa đơn,Mã sách,Số lượng,Đơn giá,Giảm giá,Thành tiền,Đơn vị tính"
+        Dim colName As String = "Mã hóa đơn,Mã sách,Số lượng,Giá bán,Giảm giá,Thành tiền,Đơn vị tính"
         Try
             SaveFileDialog1.Filter = "Excel (*.xlsx)|*.xlsx"
             SaveFileDialog1.ShowDialog()
@@ -99,7 +100,7 @@
     End Sub
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
-
+        'txt
     End Sub
 
     Private Sub btnThem_Click(sender As Object, e As EventArgs) Handles btnThem.Click

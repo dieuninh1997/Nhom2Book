@@ -22,8 +22,8 @@ Partial Class FormChiTietPN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormChiTietPN))
         Me.dgChitietPn = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
@@ -42,14 +42,14 @@ Partial Class FormChiTietPN
         Me.picExit = New System.Windows.Forms.PictureBox()
         Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.BunifuGradientPanel3 = New Bunifu.Framework.UI.BunifuGradientPanel()
-        Me.BunifuCustomTextbox2 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
-        Me.BunifuCustomTextbox3 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.txtDvt = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.txtSoLuong = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.txtMaSach = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.txtGiaNhap = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.BunifuCustomLabel10 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.BunifuCustomLabel12 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel13 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel14 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.btnUpdate = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnXoa = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnThem = New Bunifu.Framework.UI.BunifuTileButton()
@@ -61,21 +61,21 @@ Partial Class FormChiTietPN
         '
         'dgChitietPn
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dgChitietPn.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dgChitietPn.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
         Me.dgChitietPn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgChitietPn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgChitietPn.BackgroundColor = System.Drawing.Color.Gainsboro
         Me.dgChitietPn.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgChitietPn.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgChitietPn.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgChitietPn.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dgChitietPn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgChitietPn.DoubleBuffered = True
         Me.dgChitietPn.EnableHeadersVisualStyles = False
@@ -92,7 +92,7 @@ Partial Class FormChiTietPN
         Me.BunifuCustomLabel1.AutoSize = True
         Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuCustomLabel1.ForeColor = System.Drawing.Color.Black
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(68, 46)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(42, 46)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(148, 21)
         Me.BunifuCustomLabel1.TabIndex = 2
@@ -199,6 +199,7 @@ Partial Class FormChiTietPN
         'txtMapnCtpn
         '
         Me.txtMapnCtpn.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtMapnCtpn.Enabled = False
         Me.txtMapnCtpn.Location = New System.Drawing.Point(718, 109)
         Me.txtMapnCtpn.Multiline = True
         Me.txtMapnCtpn.Name = "txtMapnCtpn"
@@ -208,6 +209,7 @@ Partial Class FormChiTietPN
         'txtManvCtpn
         '
         Me.txtManvCtpn.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtManvCtpn.Enabled = False
         Me.txtManvCtpn.Location = New System.Drawing.Point(718, 183)
         Me.txtManvCtpn.Multiline = True
         Me.txtManvCtpn.Name = "txtManvCtpn"
@@ -217,6 +219,7 @@ Partial Class FormChiTietPN
         'txtManccCtpn
         '
         Me.txtManccCtpn.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtManccCtpn.Enabled = False
         Me.txtManccCtpn.Location = New System.Drawing.Point(718, 258)
         Me.txtManccCtpn.Multiline = True
         Me.txtManccCtpn.Name = "txtManccCtpn"
@@ -226,6 +229,7 @@ Partial Class FormChiTietPN
         'txtNgNhapCtpn
         '
         Me.txtNgNhapCtpn.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtNgNhapCtpn.Enabled = False
         Me.txtNgNhapCtpn.Location = New System.Drawing.Point(718, 327)
         Me.txtNgNhapCtpn.Multiline = True
         Me.txtNgNhapCtpn.Name = "txtNgNhapCtpn"
@@ -235,6 +239,7 @@ Partial Class FormChiTietPN
         'txtTongTienCtpn
         '
         Me.txtTongTienCtpn.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtTongTienCtpn.Enabled = False
         Me.txtTongTienCtpn.Location = New System.Drawing.Point(718, 396)
         Me.txtTongTienCtpn.Multiline = True
         Me.txtTongTienCtpn.Name = "txtTongTienCtpn"
@@ -269,14 +274,14 @@ Partial Class FormChiTietPN
         '
         Me.BunifuGradientPanel3.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel3.BackgroundImage"), System.Drawing.Image)
         Me.BunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuGradientPanel3.Controls.Add(Me.BunifuCustomTextbox2)
-        Me.BunifuGradientPanel3.Controls.Add(Me.BunifuCustomTextbox3)
+        Me.BunifuGradientPanel3.Controls.Add(Me.txtDvt)
+        Me.BunifuGradientPanel3.Controls.Add(Me.txtSoLuong)
+        Me.BunifuGradientPanel3.Controls.Add(Me.txtMaSach)
+        Me.BunifuGradientPanel3.Controls.Add(Me.txtGiaNhap)
         Me.BunifuGradientPanel3.Controls.Add(Me.BunifuCustomLabel10)
-        Me.BunifuGradientPanel3.Controls.Add(Me.ComboBox1)
         Me.BunifuGradientPanel3.Controls.Add(Me.BunifuCustomLabel12)
         Me.BunifuGradientPanel3.Controls.Add(Me.BunifuCustomLabel13)
         Me.BunifuGradientPanel3.Controls.Add(Me.BunifuCustomLabel14)
-        Me.BunifuGradientPanel3.Controls.Add(Me.ComboBox2)
         Me.BunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.BunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.BunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(198, Byte), Integer))
@@ -284,26 +289,44 @@ Partial Class FormChiTietPN
         Me.BunifuGradientPanel3.Location = New System.Drawing.Point(43, 70)
         Me.BunifuGradientPanel3.Name = "BunifuGradientPanel3"
         Me.BunifuGradientPanel3.Quality = 10
-        Me.BunifuGradientPanel3.Size = New System.Drawing.Size(647, 142)
+        Me.BunifuGradientPanel3.Size = New System.Drawing.Size(647, 152)
         Me.BunifuGradientPanel3.TabIndex = 88
         '
-        'BunifuCustomTextbox2
+        'txtDvt
         '
-        Me.BunifuCustomTextbox2.BorderColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomTextbox2.Location = New System.Drawing.Point(25, 30)
-        Me.BunifuCustomTextbox2.Multiline = True
-        Me.BunifuCustomTextbox2.Name = "BunifuCustomTextbox2"
-        Me.BunifuCustomTextbox2.Size = New System.Drawing.Size(302, 35)
-        Me.BunifuCustomTextbox2.TabIndex = 40
+        Me.txtDvt.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtDvt.Location = New System.Drawing.Point(339, 90)
+        Me.txtDvt.Multiline = True
+        Me.txtDvt.Name = "txtDvt"
+        Me.txtDvt.Size = New System.Drawing.Size(283, 35)
+        Me.txtDvt.TabIndex = 42
         '
-        'BunifuCustomTextbox3
+        'txtSoLuong
         '
-        Me.BunifuCustomTextbox3.BorderColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomTextbox3.Location = New System.Drawing.Point(25, 89)
-        Me.BunifuCustomTextbox3.Multiline = True
-        Me.BunifuCustomTextbox3.Name = "BunifuCustomTextbox3"
-        Me.BunifuCustomTextbox3.Size = New System.Drawing.Size(302, 35)
-        Me.BunifuCustomTextbox3.TabIndex = 35
+        Me.txtSoLuong.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtSoLuong.Location = New System.Drawing.Point(339, 30)
+        Me.txtSoLuong.Multiline = True
+        Me.txtSoLuong.Name = "txtSoLuong"
+        Me.txtSoLuong.Size = New System.Drawing.Size(283, 35)
+        Me.txtSoLuong.TabIndex = 41
+        '
+        'txtMaSach
+        '
+        Me.txtMaSach.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtMaSach.Location = New System.Drawing.Point(25, 30)
+        Me.txtMaSach.Multiline = True
+        Me.txtMaSach.Name = "txtMaSach"
+        Me.txtMaSach.Size = New System.Drawing.Size(283, 35)
+        Me.txtMaSach.TabIndex = 40
+        '
+        'txtGiaNhap
+        '
+        Me.txtGiaNhap.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtGiaNhap.Location = New System.Drawing.Point(25, 89)
+        Me.txtGiaNhap.Multiline = True
+        Me.txtGiaNhap.Name = "txtGiaNhap"
+        Me.txtGiaNhap.Size = New System.Drawing.Size(283, 35)
+        Me.txtGiaNhap.TabIndex = 35
         '
         'BunifuCustomLabel10
         '
@@ -312,17 +335,9 @@ Partial Class FormChiTietPN
         Me.BunifuCustomLabel10.ForeColor = System.Drawing.Color.Black
         Me.BunifuCustomLabel10.Location = New System.Drawing.Point(26, 74)
         Me.BunifuCustomLabel10.Name = "BunifuCustomLabel10"
-        Me.BunifuCustomLabel10.Size = New System.Drawing.Size(49, 13)
+        Me.BunifuCustomLabel10.Size = New System.Drawing.Size(114, 13)
         Me.BunifuCustomLabel10.TabIndex = 34
-        Me.BunifuCustomLabel10.Text = "Số lượng"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(353, 30)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(269, 21)
-        Me.ComboBox1.TabIndex = 36
+        Me.BunifuCustomLabel10.Text = "Giá nhập ( nghìn VNĐ)"
         '
         'BunifuCustomLabel12
         '
@@ -331,39 +346,31 @@ Partial Class FormChiTietPN
         Me.BunifuCustomLabel12.ForeColor = System.Drawing.Color.Black
         Me.BunifuCustomLabel12.Location = New System.Drawing.Point(26, 14)
         Me.BunifuCustomLabel12.Name = "BunifuCustomLabel12"
-        Me.BunifuCustomLabel12.Size = New System.Drawing.Size(78, 13)
+        Me.BunifuCustomLabel12.Size = New System.Drawing.Size(48, 13)
         Me.BunifuCustomLabel12.TabIndex = 30
-        Me.BunifuCustomLabel12.Text = "Mã phiếu nhập"
+        Me.BunifuCustomLabel12.Text = "Mã sách"
         '
         'BunifuCustomLabel13
         '
         Me.BunifuCustomLabel13.AutoSize = True
         Me.BunifuCustomLabel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.BunifuCustomLabel13.ForeColor = System.Drawing.Color.Black
-        Me.BunifuCustomLabel13.Location = New System.Drawing.Point(350, 14)
+        Me.BunifuCustomLabel13.Location = New System.Drawing.Point(342, 14)
         Me.BunifuCustomLabel13.Name = "BunifuCustomLabel13"
-        Me.BunifuCustomLabel13.Size = New System.Drawing.Size(48, 13)
+        Me.BunifuCustomLabel13.Size = New System.Drawing.Size(49, 13)
         Me.BunifuCustomLabel13.TabIndex = 32
-        Me.BunifuCustomLabel13.Text = "Mã sách"
+        Me.BunifuCustomLabel13.Text = "Số lượng"
         '
         'BunifuCustomLabel14
         '
         Me.BunifuCustomLabel14.AutoSize = True
         Me.BunifuCustomLabel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.BunifuCustomLabel14.ForeColor = System.Drawing.Color.Black
-        Me.BunifuCustomLabel14.Location = New System.Drawing.Point(350, 74)
+        Me.BunifuCustomLabel14.Location = New System.Drawing.Point(340, 74)
         Me.BunifuCustomLabel14.Name = "BunifuCustomLabel14"
         Me.BunifuCustomLabel14.Size = New System.Drawing.Size(60, 13)
         Me.BunifuCustomLabel14.TabIndex = 38
         Me.BunifuCustomLabel14.Text = "Đơn vị tính"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(353, 89)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(269, 21)
-        Me.ComboBox2.TabIndex = 39
         '
         'btnUpdate
         '
@@ -467,7 +474,7 @@ Partial Class FormChiTietPN
         Me.Controls.Add(Me.BunifuCustomLabel1)
         Me.Controls.Add(Me.dgChitietPn)
         Me.Controls.Add(Me.BunifuGradientPanel1)
-        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "FormChiTietPN"
         Me.Size = New System.Drawing.Size(1016, 670)
         CType(Me.dgChitietPn, System.ComponentModel.ISupportInitialize).EndInit()
@@ -496,16 +503,16 @@ Partial Class FormChiTietPN
     Friend WithEvents picExit As PictureBox
     Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents BunifuGradientPanel3 As Bunifu.Framework.UI.BunifuGradientPanel
-    Friend WithEvents BunifuCustomTextbox2 As WindowsFormsControlLibrary1.BunifuCustomTextbox
-    Friend WithEvents BunifuCustomTextbox3 As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents txtMaSach As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents txtGiaNhap As WindowsFormsControlLibrary1.BunifuCustomTextbox
     Friend WithEvents BunifuCustomLabel10 As Bunifu.Framework.UI.BunifuCustomLabel
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents BunifuCustomLabel12 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel13 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel14 As Bunifu.Framework.UI.BunifuCustomLabel
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents btnUpdate As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents btnXoa As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents btnThem As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents btnNew As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents txtDvt As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents txtSoLuong As WindowsFormsControlLibrary1.BunifuCustomTextbox
 End Class

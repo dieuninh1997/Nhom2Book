@@ -58,7 +58,7 @@ Partial Class FormTheLoai
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
@@ -67,7 +67,7 @@ Partial Class FormTheLoai
         Me.dgTheloai.DoubleBuffered = True
         Me.dgTheloai.EnableHeadersVisualStyles = False
         Me.dgTheloai.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.dgTheloai.HeaderForeColor = System.Drawing.Color.Black
+        Me.dgTheloai.HeaderForeColor = System.Drawing.Color.White
         Me.dgTheloai.Location = New System.Drawing.Point(421, 35)
         Me.dgTheloai.Name = "dgTheloai"
         Me.dgTheloai.ReadOnly = True

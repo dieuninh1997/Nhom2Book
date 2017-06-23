@@ -140,7 +140,7 @@
 
 
 
-        dgSach.HeaderForeColor = Color.Black
+        dgSach.HeaderForeColor = Color.White
         dgSach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgSach.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells
 
@@ -329,5 +329,7 @@
 
     End Sub
 
+    Private Sub panelTop_Paint(sender As Object, e As PaintEventArgs) Handles panelTop.Paint
 
+    End Sub
 End Class

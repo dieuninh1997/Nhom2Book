@@ -141,7 +141,7 @@ Partial Class FormBook
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
@@ -150,7 +150,7 @@ Partial Class FormBook
         Me.dgSach.DoubleBuffered = True
         Me.dgSach.EnableHeadersVisualStyles = False
         Me.dgSach.HeaderBgColor = System.Drawing.Color.SeaGreen
-        Me.dgSach.HeaderForeColor = System.Drawing.Color.SeaGreen
+        Me.dgSach.HeaderForeColor = System.Drawing.Color.White
         Me.dgSach.Location = New System.Drawing.Point(420, 133)
         Me.dgSach.Name = "dgSach"
         Me.dgSach.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -469,7 +469,7 @@ Partial Class FormBook
         'FormTacgia1
         '
         Me.FormTacgia1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.FormTacgia1.Location = New System.Drawing.Point(0, 64)
+        Me.FormTacgia1.Location = New System.Drawing.Point(0, 65)
         Me.FormTacgia1.Name = "FormTacgia1"
         Me.FormTacgia1.Size = New System.Drawing.Size(1014, 596)
         Me.FormTacgia1.TabIndex = 68
@@ -477,7 +477,7 @@ Partial Class FormBook
         'FormTheLoai1
         '
         Me.FormTheLoai1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.FormTheLoai1.Location = New System.Drawing.Point(0, 67)
+        Me.FormTheLoai1.Location = New System.Drawing.Point(0, 65)
         Me.FormTheLoai1.Name = "FormTheLoai1"
         Me.FormTheLoai1.Size = New System.Drawing.Size(1014, 596)
         Me.FormTheLoai1.TabIndex = 67
@@ -522,7 +522,7 @@ Partial Class FormBook
         Me.Controls.Add(Me.dgSach)
         Me.Controls.Add(Me.panelTop)
         Me.Name = "FormBook"
-        Me.Size = New System.Drawing.Size(895, 545)
+        Me.Size = New System.Drawing.Size(878, 528)
         Me.panelTop.ResumeLayout(False)
         CType(Me.dgSach, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).EndInit()

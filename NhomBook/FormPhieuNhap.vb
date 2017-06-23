@@ -108,6 +108,8 @@
         loadNv()
         sl = dgPhieuNhap.Rows.Count - 1
         lbSoluongPhieuNhap.Text = sl.ToString
+        ' cbSearch.Enabled = False
+        ' cbSearch.Focused=False
         LoadDataOnCbSearchTheo()
     End Sub
 

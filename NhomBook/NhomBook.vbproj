@@ -81,6 +81,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classCtpn.vb" />
     <Compile Include="ClassHoadon.vb" />
     <Compile Include="ClassKhach.vb" />
     <Compile Include="ClassNCC.vb" />
