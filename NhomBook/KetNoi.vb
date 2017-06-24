@@ -52,12 +52,19 @@ Public Class KetNoi
         For i = 0 To _soluong
             cmd.Parameters.AddWithValue(Name(i), Values(i))
         Next
-        kq = cmd.ExecuteNonQuery
+        Try
+            kq = cmd.ExecuteNonQuery
+        Catch ex As Exception
+            MsgBox("No committed!")
+        End Try
+
         If con.State = ConnectionState.Open Then
             con.Close()
         End If
         Return kq
     End Function
+
+
     Public Function checkID(ByVal sql As String, ByVal Name() As String, ByVal Values() As String, ByVal _soluong As Integer) As DataTable
         Dim i As Integer
 
@@ -90,5 +97,8 @@ Public Class KetNoi
         da.Fill(dt)
         Return dt
     End Function
+
+
+
 End Class
 

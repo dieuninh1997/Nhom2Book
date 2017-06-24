@@ -59,8 +59,9 @@ Partial Class FormBook
         Me.txtNXB = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
         Me.lbNXB = New System.Windows.Forms.Label()
         Me.btnDelSearch = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.FormTacgia1 = New NhomBook.FormTacgia()
+        Me.btnRefesh = New Bunifu.Framework.UI.BunifuTileButton()
         Me.FormTheLoai1 = New NhomBook.FormTheLoai()
+        Me.FormTacgia1 = New NhomBook.FormTacgia()
         Me.panelTop.SuspendLayout()
         CType(Me.dgSach, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,10 +72,12 @@ Partial Class FormBook
         Me.panelTop.BackColor = System.Drawing.Color.White
         Me.panelTop.BackgroundImage = CType(resources.GetObject("panelTop.BackgroundImage"), System.Drawing.Image)
         Me.panelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.panelTop.Controls.Add(Me.btnRefesh)
         Me.panelTop.Controls.Add(Me.separator)
         Me.panelTop.Controls.Add(Me.btnSach)
         Me.panelTop.Controls.Add(Me.btnTacgia)
         Me.panelTop.Controls.Add(Me.btnTheloai)
+        Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTop.GradientBottomLeft = System.Drawing.Color.White
         Me.panelTop.GradientBottomRight = System.Drawing.Color.White
         Me.panelTop.GradientTopLeft = System.Drawing.Color.White
@@ -82,7 +85,8 @@ Partial Class FormBook
         Me.panelTop.Location = New System.Drawing.Point(0, 0)
         Me.panelTop.Name = "panelTop"
         Me.panelTop.Quality = 10
-        Me.panelTop.Size = New System.Drawing.Size(1014, 65)
+        Me.panelTop.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.panelTop.Size = New System.Drawing.Size(1016, 65)
         Me.panelTop.TabIndex = 0
         '
         'separator
@@ -151,16 +155,16 @@ Partial Class FormBook
         Me.dgSach.EnableHeadersVisualStyles = False
         Me.dgSach.HeaderBgColor = System.Drawing.Color.SeaGreen
         Me.dgSach.HeaderForeColor = System.Drawing.Color.White
-        Me.dgSach.Location = New System.Drawing.Point(420, 133)
+        Me.dgSach.Location = New System.Drawing.Point(432, 159)
         Me.dgSach.Name = "dgSach"
         Me.dgSach.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.dgSach.Size = New System.Drawing.Size(541, 488)
+        Me.dgSach.Size = New System.Drawing.Size(541, 478)
         Me.dgSach.TabIndex = 1
         '
         'BunifuCustomLabel2
         '
         Me.BunifuCustomLabel2.AutoSize = True
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(27, 84)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(43, 101)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(48, 13)
         Me.BunifuCustomLabel2.TabIndex = 2
@@ -169,7 +173,7 @@ Partial Class FormBook
         'BunifuCustomLabel5
         '
         Me.BunifuCustomLabel5.AutoSize = True
-        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(31, 348)
+        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(43, 381)
         Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
         Me.BunifuCustomLabel5.Size = New System.Drawing.Size(44, 13)
         Me.BunifuCustomLabel5.TabIndex = 3
@@ -178,7 +182,7 @@ Partial Class FormBook
         'BunifuCustomLabel6
         '
         Me.BunifuCustomLabel6.AutoSize = True
-        Me.BunifuCustomLabel6.Location = New System.Drawing.Point(26, 299)
+        Me.BunifuCustomLabel6.Location = New System.Drawing.Point(41, 328)
         Me.BunifuCustomLabel6.Name = "BunifuCustomLabel6"
         Me.BunifuCustomLabel6.Size = New System.Drawing.Size(45, 13)
         Me.BunifuCustomLabel6.TabIndex = 4
@@ -187,7 +191,7 @@ Partial Class FormBook
         'BunifuCustomLabel7
         '
         Me.BunifuCustomLabel7.AutoSize = True
-        Me.BunifuCustomLabel7.Location = New System.Drawing.Point(27, 253)
+        Me.BunifuCustomLabel7.Location = New System.Drawing.Point(43, 277)
         Me.BunifuCustomLabel7.Name = "BunifuCustomLabel7"
         Me.BunifuCustomLabel7.Size = New System.Drawing.Size(43, 13)
         Me.BunifuCustomLabel7.TabIndex = 5
@@ -196,7 +200,7 @@ Partial Class FormBook
         'BunifuCustomLabel8
         '
         Me.BunifuCustomLabel8.AutoSize = True
-        Me.BunifuCustomLabel8.Location = New System.Drawing.Point(27, 146)
+        Me.BunifuCustomLabel8.Location = New System.Drawing.Point(43, 171)
         Me.BunifuCustomLabel8.Name = "BunifuCustomLabel8"
         Me.BunifuCustomLabel8.Size = New System.Drawing.Size(52, 13)
         Me.BunifuCustomLabel8.TabIndex = 6
@@ -205,7 +209,7 @@ Partial Class FormBook
         'cbTacgia
         '
         Me.cbTacgia.FormattingEnabled = True
-        Me.cbTacgia.Location = New System.Drawing.Point(85, 250)
+        Me.cbTacgia.Location = New System.Drawing.Point(97, 274)
         Me.cbTacgia.Name = "cbTacgia"
         Me.cbTacgia.Size = New System.Drawing.Size(306, 21)
         Me.cbTacgia.TabIndex = 11
@@ -213,7 +217,7 @@ Partial Class FormBook
         'txtMaSach
         '
         Me.txtMaSach.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtMaSach.Location = New System.Drawing.Point(85, 81)
+        Me.txtMaSach.Location = New System.Drawing.Point(97, 95)
         Me.txtMaSach.Multiline = True
         Me.txtMaSach.Name = "txtMaSach"
         Me.txtMaSach.Size = New System.Drawing.Size(306, 34)
@@ -222,7 +226,7 @@ Partial Class FormBook
         'txtTenSach
         '
         Me.txtTenSach.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtTenSach.Location = New System.Drawing.Point(85, 143)
+        Me.txtTenSach.Location = New System.Drawing.Point(97, 161)
         Me.txtTenSach.Multiline = True
         Me.txtTenSach.Name = "txtTenSach"
         Me.txtTenSach.Size = New System.Drawing.Size(306, 78)
@@ -231,7 +235,7 @@ Partial Class FormBook
         'cbTheLoai
         '
         Me.cbTheLoai.FormattingEnabled = True
-        Me.cbTheLoai.Location = New System.Drawing.Point(85, 296)
+        Me.cbTheLoai.Location = New System.Drawing.Point(97, 325)
         Me.cbTheLoai.Name = "cbTheLoai"
         Me.cbTheLoai.Size = New System.Drawing.Size(306, 21)
         Me.cbTheLoai.TabIndex = 14
@@ -239,7 +243,7 @@ Partial Class FormBook
         'BunifuCustomLabel9
         '
         Me.BunifuCustomLabel9.AutoSize = True
-        Me.BunifuCustomLabel9.Location = New System.Drawing.Point(31, 412)
+        Me.BunifuCustomLabel9.Location = New System.Drawing.Point(41, 446)
         Me.BunifuCustomLabel9.Name = "BunifuCustomLabel9"
         Me.BunifuCustomLabel9.Size = New System.Drawing.Size(49, 13)
         Me.BunifuCustomLabel9.TabIndex = 16
@@ -248,7 +252,7 @@ Partial Class FormBook
         'BunifuCustomLabel10
         '
         Me.BunifuCustomLabel10.AutoSize = True
-        Me.BunifuCustomLabel10.Location = New System.Drawing.Point(35, 477)
+        Me.BunifuCustomLabel10.Location = New System.Drawing.Point(41, 516)
         Me.BunifuCustomLabel10.Name = "BunifuCustomLabel10"
         Me.BunifuCustomLabel10.Size = New System.Drawing.Size(44, 13)
         Me.BunifuCustomLabel10.TabIndex = 17
@@ -257,7 +261,7 @@ Partial Class FormBook
         'txtDongia
         '
         Me.txtDongia.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtDongia.Location = New System.Drawing.Point(85, 474)
+        Me.txtDongia.Location = New System.Drawing.Point(96, 514)
         Me.txtDongia.Multiline = True
         Me.txtDongia.Name = "txtDongia"
         Me.txtDongia.Size = New System.Drawing.Size(306, 34)
@@ -266,7 +270,7 @@ Partial Class FormBook
         'BunifuCustomLabel11
         '
         Me.BunifuCustomLabel11.AutoSize = True
-        Me.BunifuCustomLabel11.Location = New System.Drawing.Point(41, 495)
+        Me.BunifuCustomLabel11.Location = New System.Drawing.Point(56, 530)
         Me.BunifuCustomLabel11.Name = "BunifuCustomLabel11"
         Me.BunifuCustomLabel11.Size = New System.Drawing.Size(30, 13)
         Me.BunifuCustomLabel11.TabIndex = 22
@@ -284,7 +288,7 @@ Partial Class FormBook
         Me.txtTimKiem.LineIdleColor = System.Drawing.Color.Gray
         Me.txtTimKiem.LineMouseHoverColor = System.Drawing.Color.Blue
         Me.txtTimKiem.LineThickness = 3
-        Me.txtTimKiem.Location = New System.Drawing.Point(558, 67)
+        Me.txtTimKiem.Location = New System.Drawing.Point(543, 88)
         Me.txtTimKiem.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTimKiem.Name = "txtTimKiem"
         Me.txtTimKiem.Size = New System.Drawing.Size(370, 44)
@@ -294,7 +298,7 @@ Partial Class FormBook
         'BunifuCustomLabel12
         '
         Me.BunifuCustomLabel12.AutoSize = True
-        Me.BunifuCustomLabel12.Location = New System.Drawing.Point(417, 98)
+        Me.BunifuCustomLabel12.Location = New System.Drawing.Point(429, 119)
         Me.BunifuCustomLabel12.Name = "BunifuCustomLabel12"
         Me.BunifuCustomLabel12.Size = New System.Drawing.Size(71, 13)
         Me.BunifuCustomLabel12.TabIndex = 24
@@ -303,7 +307,7 @@ Partial Class FormBook
         'lbSoluongSach
         '
         Me.lbSoluongSach.AutoSize = True
-        Me.lbSoluongSach.Location = New System.Drawing.Point(485, 98)
+        Me.lbSoluongSach.Location = New System.Drawing.Point(506, 119)
         Me.lbSoluongSach.Name = "lbSoluongSach"
         Me.lbSoluongSach.Size = New System.Drawing.Size(19, 13)
         Me.lbSoluongSach.TabIndex = 25
@@ -322,7 +326,7 @@ Partial Class FormBook
         Me.btnthem.ImageZoom = 40
         Me.btnthem.LabelPosition = 20
         Me.btnthem.LabelText = "Thêm"
-        Me.btnthem.Location = New System.Drawing.Point(332, 546)
+        Me.btnthem.Location = New System.Drawing.Point(316, 587)
         Me.btnthem.Margin = New System.Windows.Forms.Padding(6)
         Me.btnthem.Name = "btnthem"
         Me.btnthem.Size = New System.Drawing.Size(59, 50)
@@ -341,7 +345,7 @@ Partial Class FormBook
         Me.btnXoa.ImageZoom = 40
         Me.btnXoa.LabelPosition = 20
         Me.btnXoa.LabelText = "Xóa"
-        Me.btnXoa.Location = New System.Drawing.Point(238, 546)
+        Me.btnXoa.Location = New System.Drawing.Point(228, 587)
         Me.btnXoa.Margin = New System.Windows.Forms.Padding(6)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(59, 50)
@@ -360,7 +364,7 @@ Partial Class FormBook
         Me.btnUpdate.ImageZoom = 30
         Me.btnUpdate.LabelPosition = 20
         Me.btnUpdate.LabelText = "Update"
-        Me.btnUpdate.Location = New System.Drawing.Point(141, 546)
+        Me.btnUpdate.Location = New System.Drawing.Point(144, 587)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(6)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(59, 50)
@@ -369,7 +373,7 @@ Partial Class FormBook
         'lbMasach
         '
         Me.lbMasach.AutoSize = True
-        Me.lbMasach.Location = New System.Drawing.Point(98, 117)
+        Me.lbMasach.Location = New System.Drawing.Point(111, 133)
         Me.lbMasach.Name = "lbMasach"
         Me.lbMasach.Size = New System.Drawing.Size(19, 13)
         Me.lbMasach.TabIndex = 54
@@ -379,7 +383,7 @@ Partial Class FormBook
         'lbTenSach
         '
         Me.lbTenSach.AutoSize = True
-        Me.lbTenSach.Location = New System.Drawing.Point(98, 224)
+        Me.lbTenSach.Location = New System.Drawing.Point(111, 247)
         Me.lbTenSach.Name = "lbTenSach"
         Me.lbTenSach.Size = New System.Drawing.Size(19, 13)
         Me.lbTenSach.TabIndex = 55
@@ -389,7 +393,7 @@ Partial Class FormBook
         'lbSoluong
         '
         Me.lbSoluong.AutoSize = True
-        Me.lbSoluong.Location = New System.Drawing.Point(98, 446)
+        Me.lbSoluong.Location = New System.Drawing.Point(111, 482)
         Me.lbSoluong.Name = "lbSoluong"
         Me.lbSoluong.Size = New System.Drawing.Size(19, 13)
         Me.lbSoluong.TabIndex = 56
@@ -399,7 +403,7 @@ Partial Class FormBook
         'lbDongia
         '
         Me.lbDongia.AutoSize = True
-        Me.lbDongia.Location = New System.Drawing.Point(98, 511)
+        Me.lbDongia.Location = New System.Drawing.Point(111, 551)
         Me.lbDongia.Name = "lbDongia"
         Me.lbDongia.Size = New System.Drawing.Size(19, 13)
         Me.lbDongia.TabIndex = 57
@@ -419,7 +423,7 @@ Partial Class FormBook
         Me.btnNew.ImageZoom = 40
         Me.btnNew.LabelPosition = 20
         Me.btnNew.LabelText = "New"
-        Me.btnNew.Location = New System.Drawing.Point(44, 546)
+        Me.btnNew.Location = New System.Drawing.Point(59, 587)
         Me.btnNew.Margin = New System.Windows.Forms.Padding(6)
         Me.btnNew.Name = "btnNew"
         Me.btnNew.Size = New System.Drawing.Size(59, 50)
@@ -428,7 +432,7 @@ Partial Class FormBook
         'txtSoluongton
         '
         Me.txtSoluongton.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtSoluongton.Location = New System.Drawing.Point(85, 409)
+        Me.txtSoluongton.Location = New System.Drawing.Point(96, 445)
         Me.txtSoluongton.Multiline = True
         Me.txtSoluongton.Name = "txtSoluongton"
         Me.txtSoluongton.Size = New System.Drawing.Size(306, 34)
@@ -437,7 +441,7 @@ Partial Class FormBook
         'txtNXB
         '
         Me.txtNXB.BorderColor = System.Drawing.Color.SeaGreen
-        Me.txtNXB.Location = New System.Drawing.Point(85, 345)
+        Me.txtNXB.Location = New System.Drawing.Point(97, 378)
         Me.txtNXB.Multiline = True
         Me.txtNXB.Name = "txtNXB"
         Me.txtNXB.Size = New System.Drawing.Size(306, 34)
@@ -446,7 +450,7 @@ Partial Class FormBook
         'lbNXB
         '
         Me.lbNXB.AutoSize = True
-        Me.lbNXB.Location = New System.Drawing.Point(98, 382)
+        Me.lbNXB.Location = New System.Drawing.Point(111, 415)
         Me.lbNXB.Name = "lbNXB"
         Me.lbNXB.Size = New System.Drawing.Size(19, 13)
         Me.lbNXB.TabIndex = 60
@@ -458,7 +462,7 @@ Partial Class FormBook
         Me.btnDelSearch.BackColor = System.Drawing.Color.White
         Me.btnDelSearch.Image = CType(resources.GetObject("btnDelSearch.Image"), System.Drawing.Image)
         Me.btnDelSearch.ImageActive = CType(resources.GetObject("btnDelSearch.ImageActive"), System.Drawing.Image)
-        Me.btnDelSearch.Location = New System.Drawing.Point(931, 81)
+        Me.btnDelSearch.Location = New System.Drawing.Point(920, 102)
         Me.btnDelSearch.Name = "btnDelSearch"
         Me.btnDelSearch.Size = New System.Drawing.Size(30, 30)
         Me.btnDelSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -466,28 +470,46 @@ Partial Class FormBook
         Me.btnDelSearch.TabStop = False
         Me.btnDelSearch.Zoom = 10
         '
+        'btnRefesh
+        '
+        Me.btnRefesh.BackColor = System.Drawing.Color.Turquoise
+        Me.btnRefesh.color = System.Drawing.Color.Turquoise
+        Me.btnRefesh.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRefesh.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.btnRefesh.ForeColor = System.Drawing.Color.White
+        Me.btnRefesh.Image = CType(resources.GetObject("btnRefesh.Image"), System.Drawing.Image)
+        Me.btnRefesh.ImagePosition = 5
+        Me.btnRefesh.ImageZoom = 40
+        Me.btnRefesh.LabelPosition = 0
+        Me.btnRefesh.LabelText = ""
+        Me.btnRefesh.Location = New System.Drawing.Point(921, 15)
+        Me.btnRefesh.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnRefesh.Name = "btnRefesh"
+        Me.btnRefesh.Size = New System.Drawing.Size(52, 35)
+        Me.btnRefesh.TabIndex = 7
+        '
+        'FormTheLoai1
+        '
+        Me.FormTheLoai1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.FormTheLoai1.Location = New System.Drawing.Point(-1, 65)
+        Me.FormTheLoai1.Name = "FormTheLoai1"
+        Me.FormTheLoai1.Size = New System.Drawing.Size(1014, 596)
+        Me.FormTheLoai1.TabIndex = 68
+        '
         'FormTacgia1
         '
         Me.FormTacgia1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.FormTacgia1.Location = New System.Drawing.Point(0, 65)
         Me.FormTacgia1.Name = "FormTacgia1"
         Me.FormTacgia1.Size = New System.Drawing.Size(1014, 596)
-        Me.FormTacgia1.TabIndex = 68
-        '
-        'FormTheLoai1
-        '
-        Me.FormTheLoai1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.FormTheLoai1.Location = New System.Drawing.Point(0, 65)
-        Me.FormTheLoai1.Name = "FormTheLoai1"
-        Me.FormTheLoai1.Size = New System.Drawing.Size(1014, 596)
-        Me.FormTheLoai1.TabIndex = 67
+        Me.FormTacgia1.TabIndex = 67
         '
         'FormBook
         '
-        Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoScroll = True
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.BackColor = System.Drawing.Color.White
         Me.Controls.Add(Me.FormTheLoai1)
         Me.Controls.Add(Me.FormTacgia1)
@@ -522,7 +544,7 @@ Partial Class FormBook
         Me.Controls.Add(Me.dgSach)
         Me.Controls.Add(Me.panelTop)
         Me.Name = "FormBook"
-        Me.Size = New System.Drawing.Size(878, 528)
+        Me.Size = New System.Drawing.Size(1016, 670)
         Me.panelTop.ResumeLayout(False)
         CType(Me.dgSach, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnDelSearch, System.ComponentModel.ISupportInitialize).EndInit()
@@ -565,6 +587,7 @@ Partial Class FormBook
     Friend WithEvents txtNXB As WindowsFormsControlLibrary1.BunifuCustomTextbox
     Friend WithEvents lbNXB As Label
     Friend WithEvents btnDelSearch As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents btnRefesh As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents FormTacgia1 As FormTacgia
     Friend WithEvents FormTheLoai1 As FormTheLoai
 End Class

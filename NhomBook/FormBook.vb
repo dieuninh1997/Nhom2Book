@@ -110,6 +110,8 @@
     End Sub
 
     Private Sub ClearText()
+        txtMaSach.Focus()
+
         txtMaSach.Text = ""
         txtTenSach.Text = ""
         txtSoluongton.Text = ""
@@ -326,6 +328,14 @@
         txtTimKiem.Text = ""
 
         txtTimKiem.HintText = "Tìm kiếm theo tên "
+
+    End Sub
+
+    Private Sub btnRefesh_Click_1(sender As Object, e As EventArgs) Handles btnRefesh.Click
+        ShowData()
+    End Sub
+
+    Private Sub BunifuCustomLabel8_Click(sender As Object, e As EventArgs) Handles BunifuCustomLabel8.Click
 
     End Sub
 

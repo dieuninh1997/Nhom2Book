@@ -125,6 +125,19 @@
         RU5ErkJggg==
 </value>
   </data>
+  <data name="btnRefesh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAZlJREFUWEft
+        ljsvBGEYhSfC9gohrKVQUPJDdkOhELXEJWQTROJvKJQSoRAkFJvwR0gUasSldF/PWWcSxe7O94lGMifz
+        bGbeOeedb3ZuX5IrV4zqSVKEdTiBK7iHB7iBc9iEou1/J5r2wx68Qz2DN9iBkuPKN/Z5M06kpuDJTZ5B
+        zcugQXWbIZBvF+SRV5lp9/jdAEiswKcbHMCgd7UUnmHQJVLmA+a8zhIh3JOgBmLZ5WCRqYIGr3zcAHD2
+        wp2DVZejRXbDPaIHsO1QzaVgOdcUW9oLVwEuQX/dqMvBItP04MKWbOHsgHFv5sqV6/+LR3pCj7Y3s4W5
+        6YtE2BIsAmOgl9oFFFxuL4xNDy5sCRaBM2e3XMqWAykLLkeL7Kp73EKPy9lySKSf03nvChaZn5/jssth
+        IpAOYMkNtH4KI7a0FJ4SHDqjASx6V7gcZmn8VODRtRc4hlnQNKwLOkGT1Rk4gleQV5lKo2Gs3IDlW6zo
+        rPYhnZ61Q5NSzQ37HP870VRnrRurBrqxdHn0r1yD5oFrMGB7rlwBSpIvA1JL0S8fv04AAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <data name="btnthem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAATFJREFUSEvt

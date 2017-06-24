@@ -33,7 +33,7 @@ Public Class FormChiTietPN
         Dim _soluong As Integer
         _soluong = 0
         Dim sql As String
-        sql = "checkIDCtpn"
+        sql = "checkIDCtpn1"
         Dim Name(_soluong) As String
         Dim Value(_soluong) As String
         Name(0) = "@ma"
@@ -88,20 +88,22 @@ Public Class FormChiTietPN
 
         End If
     End Sub
-    Public Function ktrID(ByVal Id As String) As DataTable
+    Public Function ktrID(ByVal _mapn As String, ByVal _mas As String) As DataTable
         Dim _soluong As Integer
-        _soluong = 0
+        _soluong = 1
         Dim sql As String
-        sql = "checkIDHoadon"
+        sql = "checkIDCtpn"
         Dim Name(_soluong) As String
         Dim Value(_soluong) As String
-        Name(0) = "@ma"
-        Value(0) = Id
+        Name(0) = "@mapn"
+        Value(0) = _mapn
+        Name(1) = "@mas"
+        Value(1) = _mas
         Return kn.checkID(sql, Name, Value, _soluong)
     End Function
 
     Public Function Add(ByVal ssql As String, ByVal ctpn As classCtpn) As Integer
-        _soluong = 4
+        _soluong = 5
 
         Dim Name(_soluong) As String
         Dim Value(_soluong) As Object
@@ -114,18 +116,22 @@ Public Class FormChiTietPN
         Value(2) = ctpn.Soluong
         Name(3) = "@gianhap"
         Value(3) = ctpn.Gianhap
-        Name(4) = "@dvt"
-        Value(4) = ctpn.Dvt
+        Name(4) = "@thanhtien"
+        Value(4) = ctpn.Thanhtien
+        Name(5) = "@dvt"
+        Value(5) = ctpn.Dvt
 
 
         Return kn.Add(ssql, Name, Value, _soluong)
     End Function
     Public Function Remove(ByVal ssql As String, ByVal ctpn As classCtpn) As Integer
-        _soluong = 0
+        _soluong = 1
         Dim Name(_soluong) As String
         Dim Value(_soluong) As Object
-        Name(0) = "@ma"
-        Value(0) = ctpn.Mas
+        Name(0) = "@mapn"
+        Value(0) = ctpn.Mapn
+        Name(1) = "@mas"
+        Value(1) = ctpn.Mas
 
 
         Return kn.Add(ssql, Name, Value, _soluong)
@@ -138,6 +144,8 @@ Public Class FormChiTietPN
 
     End Sub
     Private Sub ClearText()
+        txtMaSach.Focus()
+
         txtSoLuong.Text = ""
         txtMaSach.Text = ""
         txtDvt.Text = ""
@@ -152,11 +160,57 @@ Public Class FormChiTietPN
     End Sub
 
     Private Sub btnThem_Click(sender As Object, e As EventArgs) Handles btnThem.Click
+        Try
+            Dim _mas, _mapn As String
+            _mas = txtMaSach.Text
+            _mapn = txtMapnCtpn.Text
+            If ktrID(_mapn, _mas).Rows.Count > 0 Then
+                MsgBox("Trùng mã sách!")
+                txtMaSach.Text = ""
+                txtMaSach.Focus()
 
+            Else
+                If (String.IsNullOrEmpty(txtMaSach.Text)) OrElse (String.IsNullOrEmpty(txtSoLuong.Text)) OrElse (String.IsNullOrEmpty(txtGiaNhap.Text)) OrElse (String.IsNullOrEmpty(txtDvt.Text)) Then
+                    KtraNULL()
+                Else
+
+                    Dim ctpn As New classCtpn
+                    ctpn.Mapn = txtMapnCtpn.Text
+                    ctpn.Mas = txtMaSach.Text
+                    ctpn.Soluong = txtSoLuong.Text
+                    ctpn.Gianhap = txtGiaNhap.Text
+                    ctpn.Dvt = txtDvt.Text
+                    Dim tien As Integer = (Integer.Parse(txtSoLuong.Text)) * (Integer.Parse(txtGiaNhap.Text))
+                    ctpn.Thanhtien = Convert.ToString(tien)
+
+                    sql = "insertCHITIETPN"
+                    Add(sql, ctpn)
+                    ShowData(Me.txtMapnCtpn.Text)
+
+                    MessageBox.Show("Thêm thành công!")
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 
     Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoa.Click
+        Try
+            Dim ctpn As New classCtpn
+            ctpn.Mapn = txtMapnCtpn.Text
+            ctpn.Mas = txtMaSach.Text
+            sql = "removeItemCtpn"
+            Remove(sql, ctpn)
+            ShowData(Me.txtMapnCtpn.Text)
+            ClearText()
 
+
+            MessageBox.Show("Xóa thành công!")
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+
+        End Try
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -171,7 +225,9 @@ Public Class FormChiTietPN
             ctpn.Soluong = txtSoLuong.Text
             ctpn.Gianhap = txtGiaNhap.Text
             ctpn.Dvt = txtDvt.Text
-
+            Dim tien, gia, sl As Integer
+            tien = Integer.TryParse(txtGiaNhap.Text, gia) * Integer.TryParse(txtSoLuong.Text, sl)
+            ctpn.Thanhtien = Convert.ToString(tien)
             sql = "updateItemCtpn"
             Add(sql, ctpn)
             ShowData(Me.txtMapnCtpn.Text)
