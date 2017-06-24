@@ -52,6 +52,7 @@ Partial Class FormPhieuNhap
         Me.BunifuCustomLabel6 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.cbSearch = New System.Windows.Forms.ComboBox()
         Me.FormChiTietPN1 = New NhomBook.FormChiTietPN()
+        Me.btnRefesh = New Bunifu.Framework.UI.BunifuTileButton()
         CType(Me.dgPhieuNhap, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -318,7 +319,7 @@ Partial Class FormPhieuNhap
         Me.btnSearch.BackColor = System.Drawing.Color.White
         Me.btnSearch.Image = CType(resources.GetObject("btnSearch.Image"), System.Drawing.Image)
         Me.btnSearch.ImageActive = CType(resources.GetObject("btnSearch.ImageActive"), System.Drawing.Image)
-        Me.btnSearch.Location = New System.Drawing.Point(383, 49)
+        Me.btnSearch.Location = New System.Drawing.Point(379, 52)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(30, 30)
         Me.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -329,7 +330,7 @@ Partial Class FormPhieuNhap
         'lbSoluongPhieuNhap
         '
         Me.lbSoluongPhieuNhap.AutoSize = True
-        Me.lbSoluongPhieuNhap.Location = New System.Drawing.Point(916, 56)
+        Me.lbSoluongPhieuNhap.Location = New System.Drawing.Point(483, 56)
         Me.lbSoluongPhieuNhap.Name = "lbSoluongPhieuNhap"
         Me.lbSoluongPhieuNhap.Size = New System.Drawing.Size(13, 13)
         Me.lbSoluongPhieuNhap.TabIndex = 69
@@ -338,7 +339,7 @@ Partial Class FormPhieuNhap
         'BunifuCustomLabel7
         '
         Me.BunifuCustomLabel7.AutoSize = True
-        Me.BunifuCustomLabel7.Location = New System.Drawing.Point(869, 56)
+        Me.BunifuCustomLabel7.Location = New System.Drawing.Point(436, 56)
         Me.BunifuCustomLabel7.Name = "BunifuCustomLabel7"
         Me.BunifuCustomLabel7.Size = New System.Drawing.Size(41, 13)
         Me.BunifuCustomLabel7.TabIndex = 70
@@ -386,16 +387,36 @@ Partial Class FormPhieuNhap
         '
         Me.FormChiTietPN1.BackColor = System.Drawing.Color.White
         Me.FormChiTietPN1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.FormChiTietPN1.Location = New System.Drawing.Point(-2, 0)
+        Me.FormChiTietPN1.Location = New System.Drawing.Point(0, 0)
         Me.FormChiTietPN1.Name = "FormChiTietPN1"
         Me.FormChiTietPN1.Size = New System.Drawing.Size(1016, 670)
         Me.FormChiTietPN1.TabIndex = 71
+        '
+        'btnRefesh
+        '
+        Me.btnRefesh.BackColor = System.Drawing.Color.Turquoise
+        Me.btnRefesh.color = System.Drawing.Color.Turquoise
+        Me.btnRefesh.colorActive = System.Drawing.Color.MediumSeaGreen
+        Me.btnRefesh.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRefesh.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.btnRefesh.ForeColor = System.Drawing.Color.White
+        Me.btnRefesh.Image = CType(resources.GetObject("btnRefesh.Image"), System.Drawing.Image)
+        Me.btnRefesh.ImagePosition = 5
+        Me.btnRefesh.ImageZoom = 40
+        Me.btnRefesh.LabelPosition = 0
+        Me.btnRefesh.LabelText = ""
+        Me.btnRefesh.Location = New System.Drawing.Point(909, 34)
+        Me.btnRefesh.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnRefesh.Name = "btnRefesh"
+        Me.btnRefesh.Size = New System.Drawing.Size(52, 35)
+        Me.btnRefesh.TabIndex = 104
         '
         'FormPhieuNhap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.btnRefesh)
         Me.Controls.Add(Me.cbSearch)
         Me.Controls.Add(Me.BunifuCustomLabel6)
         Me.Controls.Add(Me.btnExcel)
@@ -459,4 +480,5 @@ Partial Class FormPhieuNhap
     Friend WithEvents btnExcel As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents BunifuCustomLabel6 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents cbSearch As ComboBox
+    Friend WithEvents btnRefesh As Bunifu.Framework.UI.BunifuTileButton
 End Class

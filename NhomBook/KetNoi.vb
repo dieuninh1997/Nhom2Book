@@ -55,7 +55,7 @@ Public Class KetNoi
         Try
             kq = cmd.ExecuteNonQuery
         Catch ex As Exception
-            MsgBox("No committed!")
+            MsgBox(ex.ToString)
         End Try
 
         If con.State = ConnectionState.Open Then

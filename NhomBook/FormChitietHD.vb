@@ -12,7 +12,7 @@
 
     Private Sub loadMas()
         cbMaSach.DataSource = kn.getData("loadSACH")
-        cbMaSach.DisplayMember() = "tens"
+        cbMaSach.DisplayMember() = "mas"
         cbMaSach.ValueMember() = "mas"
 
     End Sub
@@ -39,7 +39,7 @@
     End Function
 
     Public Function Add(ByVal ssql As String, ByVal cthd As classCthd) As Integer
-        _soluong = 4
+        _soluong = 5
 
         Dim Name(_soluong) As String
         Dim Value(_soluong) As Object
@@ -54,6 +54,7 @@
         Value(3) = cthd.Giaban
         Name(4) = "@dvt"
         Value(4) = cthd.Dvt
+
 
 
         Return kn.Add(ssql, Name, Value, _soluong)
@@ -145,6 +146,8 @@
 
     Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
         ClearText()
+        cbMaSach.Enabled = True
+
     End Sub
 
     Private Sub btnThem_Click(sender As Object, e As EventArgs) Handles btnThem.Click
@@ -169,10 +172,17 @@
                     cthd.Dvt = cbDvt.SelectedValue
 
                     sql = "insertCHITIETHD"
-                    Add(sql, cthd)
-                    ShowData(Me.txtMaHdCthd.Text)
+                    If (Add(sql, cthd) <> -1) Then
 
-                    MessageBox.Show("Thêm thành công!")
+                        ShowData(Me.txtMaHdCthd.Text)
+                        '  NameHeaderDgv()
+                        MessageBox.Show("Thêm thành công!")
+                    Else
+                        MessageBox.Show("Thêm thất bại!")
+                        ClearText()
+
+                    End If
+
                 End If
             End If
         Catch ex As Exception
@@ -229,7 +239,7 @@
         If e.RowIndex >= 0 Then
             Dim row As New DataGridViewRow
             row = dgChitietHd.Rows(e.RowIndex)
-
+            cbMaSach.Enabled = False
             cbMaSach.Text = row.Cells("mas").Value.ToString
             txtSoLuong.Text = row.Cells("soluong").Value.ToString
             txtGiaBan.Text = row.Cells("giaban").Value.ToString

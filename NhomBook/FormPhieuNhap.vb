@@ -359,4 +359,13 @@
         End If
         lbSoluongPhieuNhap.Text = dgPhieuNhap.RowCount - 1
     End Sub
+
+    Private Sub btnRefesh_Click(sender As Object, e As EventArgs) Handles btnRefesh.Click
+        ShowData()
+
+    End Sub
+
+    Private Sub FormChiTietPN1_Load(sender As Object, e As EventArgs) Handles FormChiTietPN1.Load
+
+    End Sub
 End Class

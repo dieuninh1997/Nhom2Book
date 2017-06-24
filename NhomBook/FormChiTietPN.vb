@@ -103,7 +103,7 @@ Public Class FormChiTietPN
     End Function
 
     Public Function Add(ByVal ssql As String, ByVal ctpn As classCtpn) As Integer
-        _soluong = 5
+        _soluong = 4
 
         Dim Name(_soluong) As String
         Dim Value(_soluong) As Object
@@ -116,10 +116,9 @@ Public Class FormChiTietPN
         Value(2) = ctpn.Soluong
         Name(3) = "@gianhap"
         Value(3) = ctpn.Gianhap
-        Name(4) = "@thanhtien"
-        Value(4) = ctpn.Thanhtien
-        Name(5) = "@dvt"
-        Value(5) = ctpn.Dvt
+
+        Name(4) = "@dvt"
+        Value(4) = ctpn.Dvt
 
 
         Return kn.Add(ssql, Name, Value, _soluong)
@@ -180,8 +179,8 @@ Public Class FormChiTietPN
                     ctpn.Soluong = txtSoLuong.Text
                     ctpn.Gianhap = txtGiaNhap.Text
                     ctpn.Dvt = txtDvt.Text
-                    Dim tien As Integer = (Integer.Parse(txtSoLuong.Text)) * (Integer.Parse(txtGiaNhap.Text))
-                    ctpn.Thanhtien = Convert.ToString(tien)
+                    '    Dim tien As Integer = (Integer.Parse(txtSoLuong.Text)) * (Integer.Parse(txtGiaNhap.Text))
+                    '    ctpn.Thanhtien = Convert.ToString(tien)
 
                     sql = "insertCHITIETPN"
                     Add(sql, ctpn)
@@ -225,9 +224,7 @@ Public Class FormChiTietPN
             ctpn.Soluong = txtSoLuong.Text
             ctpn.Gianhap = txtGiaNhap.Text
             ctpn.Dvt = txtDvt.Text
-            Dim tien, gia, sl As Integer
-            tien = Integer.TryParse(txtGiaNhap.Text, gia) * Integer.TryParse(txtSoLuong.Text, sl)
-            ctpn.Thanhtien = Convert.ToString(tien)
+
             sql = "updateItemCtpn"
             Add(sql, ctpn)
             ShowData(Me.txtMapnCtpn.Text)
