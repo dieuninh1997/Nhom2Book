@@ -70,6 +70,7 @@ Public Class FormChiTietPN
     Private Sub txtMapnCtpn_TextChanged(sender As Object, e As EventArgs) Handles txtMapnCtpn.TextChanged
         ShowData(Me.txtMapnCtpn.Text)
         NameHeaderDgv()
+        ClearText()
     End Sub
 
     Private Sub dgCtpn_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgChitietPn.CellClick
@@ -231,5 +232,9 @@ Public Class FormChiTietPN
             '  NameHeaderDgv()
             MessageBox.Show("Cập nhật thành công!")
         End If
+    End Sub
+
+    Private Sub txtTongTienCtpn_TextChanged(sender As Object, e As EventArgs) Handles txtTongTienCtpn.TextChanged
+
     End Sub
 End Class

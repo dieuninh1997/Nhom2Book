@@ -183,6 +183,7 @@
         ClearText()
         txtMapn.Enabled = True
         txtMapn.Focus()
+        txtTongtien.Text = "0"
 
     End Sub
 
@@ -355,6 +356,36 @@
                     ShowData()
                     End
                 End If
+            End If
+        ElseIf cbSearch.SelectedValue = "Tổng tiền (trong khoảng a-b)" Then 'search theo tổng tiền
+            sql = "searchBy1TongTien"
+            _soluong = 1
+
+            Dim Name(_soluong) As String
+            Dim Value(_soluong) As Integer
+
+            If txtTimKiem.Text.Length > 0 Then
+                Dim Mang() As String
+                Mang = txtTimKiem.Text.Split("-")
+                MsgBox(Mang(0))
+                MsgBox(Mang(1))
+
+
+                Name(0) = "@t"
+
+
+                Value(0) = Integer.Parse(Mang(0))
+
+                Name(1) = "@tt"
+                Value(1) = Integer.Parse(Mang(1))
+
+
+                dgPhieuNhap.DataSource = kn.checkID(sql, Name, Value, _soluong)
+
+                    btnExcel.Enabled = True
+                Else
+                    btnExcel.Enabled = False
+                ShowData()
             End If
         End If
         lbSoluongPhieuNhap.Text = dgPhieuNhap.RowCount - 1

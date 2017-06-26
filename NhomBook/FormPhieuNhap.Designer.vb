@@ -133,11 +133,13 @@ Partial Class FormPhieuNhap
         'txtTongtien
         '
         Me.txtTongtien.BorderColor = System.Drawing.Color.SeaGreen
+        Me.txtTongtien.Enabled = False
         Me.txtTongtien.Location = New System.Drawing.Point(124, 313)
         Me.txtTongtien.Multiline = True
         Me.txtTongtien.Name = "txtTongtien"
         Me.txtTongtien.Size = New System.Drawing.Size(278, 34)
         Me.txtTongtien.TabIndex = 29
+        Me.txtTongtien.Text = "0"
         '
         'BunifuCustomLabel3
         '

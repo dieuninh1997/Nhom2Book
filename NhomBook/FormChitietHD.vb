@@ -8,6 +8,8 @@
     Private Sub FormChitietHD_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadMas()
         loadDvt()
+        ClearText()
+
     End Sub
 
     Private Sub loadMas()
@@ -28,10 +30,10 @@
         Dim _soluong As Integer
         _soluong = 1
         Dim sql As String
-        sql = "checkIDCtpn"
+        sql = "checkIDCthd"
         Dim Name(_soluong) As String
         Dim Value(_soluong) As String
-        Name(0) = "@mapn"
+        Name(0) = "@mahd"
         Value(0) = _mahd
         Name(1) = "@mas"
         Value(1) = _mas
@@ -39,7 +41,7 @@
     End Function
 
     Public Function Add(ByVal ssql As String, ByVal cthd As classCthd) As Integer
-        _soluong = 5
+        _soluong = 4
 
         Dim Name(_soluong) As String
         Dim Value(_soluong) As Object
@@ -92,7 +94,7 @@
         dgChitietHd.Columns("mas").HeaderText = "Mã sách"
         dgChitietHd.Columns("soluong").HeaderText = "Số lượng"
         dgChitietHd.Columns("giaban").HeaderText = "Giá bán"
-        dgChitietHd.Columns("giamgia").HeaderText = "Giảm giá"
+        ' dgChitietHd.Columns("giamgia").HeaderText = "Giảm giá"
 
         dgChitietHd.Columns("thanhtien").HeaderText = "Thành tiền"
         dgChitietHd.Columns("dvt").HeaderText = "Đơn vị tính"
@@ -100,7 +102,7 @@
     Private Sub btnInHd_Click(sender As Object, e As EventArgs) Handles btnInHd.Click
         Dim SaveFileDialog1 As SaveFileDialog = New SaveFileDialog()
 
-        Dim colName As String = "Mã hóa đơn,Mã sách,Số lượng,Giá bán,Giảm giá,Thành tiền,Đơn vị tính"
+        Dim colName As String = "Mã hóa đơn,Mã sách,Số lượng,Giá bán,Thành tiền,Đơn vị tính"
         Try
             SaveFileDialog1.Filter = "Excel (*.xlsx)|*.xlsx"
             SaveFileDialog1.ShowDialog()
@@ -136,6 +138,7 @@
     End Sub
 
     Private Sub txtMaHdCthd_TextChanged(sender As Object, e As EventArgs) Handles txtMaHdCthd.TextChanged
+        ClearText()
         ShowData(Me.txtMaHdCthd.Text)
         NameHeaderDgv()
     End Sub
@@ -157,8 +160,6 @@
             _mahd = txtMaHdCthd.Text
             If ktrID(_mahd, _mas).Rows.Count > 0 Then
                 MsgBox("Trùng mã sách!")
-
-
             Else
                 If (String.IsNullOrEmpty(txtSoLuong.Text)) OrElse (String.IsNullOrEmpty(txtGiaBan.Text)) Then
                     KtraNULL()
@@ -189,6 +190,7 @@
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
+
 
     Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoa.Click
         Try
@@ -226,7 +228,9 @@
 
                 ShowData(Me.txtMaHdCthd.Text)
                 '  NameHeaderDgv()
+
                 MessageBox.Show("Cập nhật thành công!")
+
             Else
                 MessageBox.Show("Cập nhật thất bại!")
                 ClearText()

@@ -23,7 +23,7 @@ Partial Class FormSignUp
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
+        Dim Animation1 As BunifuAnimatorNS.Animation = New BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSignUp))
         Me.txtFname = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtLname = New Bunifu.Framework.UI.BunifuMetroTextbox()
@@ -42,6 +42,11 @@ Partial Class FormSignUp
         Me.drag2 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.tran = New BunifuAnimatorNS.BunifuTransition(Me.components)
         Me.picClose = New System.Windows.Forms.PictureBox()
+        Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel5 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel6 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
         CType(Me.picSignUp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -260,9 +265,9 @@ Partial Class FormSignUp
         Me.lbThongBao.ForeColor = System.Drawing.Color.Red
         Me.lbThongBao.Location = New System.Drawing.Point(196, 145)
         Me.lbThongBao.Name = "lbThongBao"
-        Me.lbThongBao.Size = New System.Drawing.Size(105, 13)
+        Me.lbThongBao.Size = New System.Drawing.Size(118, 13)
         Me.lbThongBao.TabIndex = 14
-        Me.lbThongBao.Text = "không được để rỗng"
+        Me.lbThongBao.Text = "(*) không được để rỗng"
         '
         'drag1
         '
@@ -282,22 +287,22 @@ Partial Class FormSignUp
         '
         Me.tran.AnimationType = BunifuAnimatorNS.AnimationType.VertSlide
         Me.tran.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0, 0, 0, 0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.tran.DefaultAnimation = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.tran.DefaultAnimation = Animation1
         '
         'picClose
         '
@@ -311,11 +316,76 @@ Partial Class FormSignUp
         Me.picClose.TabIndex = 15
         Me.picClose.TabStop = False
         '
+        'BunifuCustomLabel4
+        '
+        Me.BunifuCustomLabel4.AutoSize = True
+        Me.tran.SetDecoration(Me.BunifuCustomLabel4, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuCustomLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel4.ForeColor = System.Drawing.Color.Red
+        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(47, 339)
+        Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
+        Me.BunifuCustomLabel4.Size = New System.Drawing.Size(17, 24)
+        Me.BunifuCustomLabel4.TabIndex = 18
+        Me.BunifuCustomLabel4.Text = "*"
+        '
+        'BunifuCustomLabel5
+        '
+        Me.BunifuCustomLabel5.AutoSize = True
+        Me.tran.SetDecoration(Me.BunifuCustomLabel5, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuCustomLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel5.ForeColor = System.Drawing.Color.Red
+        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(47, 411)
+        Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
+        Me.BunifuCustomLabel5.Size = New System.Drawing.Size(17, 24)
+        Me.BunifuCustomLabel5.TabIndex = 19
+        Me.BunifuCustomLabel5.Text = "*"
+        '
+        'BunifuCustomLabel6
+        '
+        Me.BunifuCustomLabel6.AutoSize = True
+        Me.tran.SetDecoration(Me.BunifuCustomLabel6, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuCustomLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel6.ForeColor = System.Drawing.Color.Red
+        Me.BunifuCustomLabel6.Location = New System.Drawing.Point(48, 482)
+        Me.BunifuCustomLabel6.Name = "BunifuCustomLabel6"
+        Me.BunifuCustomLabel6.Size = New System.Drawing.Size(17, 24)
+        Me.BunifuCustomLabel6.TabIndex = 20
+        Me.BunifuCustomLabel6.Text = "*"
+        '
+        'BunifuCustomLabel2
+        '
+        Me.BunifuCustomLabel2.AutoSize = True
+        Me.tran.SetDecoration(Me.BunifuCustomLabel2, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuCustomLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel2.ForeColor = System.Drawing.Color.Red
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(48, 255)
+        Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
+        Me.BunifuCustomLabel2.Size = New System.Drawing.Size(17, 24)
+        Me.BunifuCustomLabel2.TabIndex = 21
+        Me.BunifuCustomLabel2.Text = "*"
+        '
+        'BunifuCustomLabel3
+        '
+        Me.BunifuCustomLabel3.AutoSize = True
+        Me.tran.SetDecoration(Me.BunifuCustomLabel3, BunifuAnimatorNS.DecorationType.None)
+        Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel3.ForeColor = System.Drawing.Color.Red
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(47, 183)
+        Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
+        Me.BunifuCustomLabel3.Size = New System.Drawing.Size(17, 24)
+        Me.BunifuCustomLabel3.TabIndex = 22
+        Me.BunifuCustomLabel3.Text = "*"
+        '
         'FormSignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.Controls.Add(Me.BunifuCustomLabel3)
+        Me.Controls.Add(Me.BunifuCustomLabel2)
+        Me.Controls.Add(Me.BunifuCustomLabel6)
+        Me.Controls.Add(Me.BunifuCustomLabel5)
+        Me.Controls.Add(Me.BunifuCustomLabel4)
         Me.Controls.Add(Me.picClose)
         Me.Controls.Add(Me.lbThongBao)
         Me.Controls.Add(Me.BunifuCustomLabel1)
@@ -360,4 +430,9 @@ Partial Class FormSignUp
     Friend WithEvents drag2 As Bunifu.Framework.UI.BunifuDragControl
     Friend WithEvents tran As BunifuAnimatorNS.BunifuTransition
     Friend WithEvents picClose As PictureBox
+    Friend WithEvents BunifuCustomLabel6 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents BunifuCustomLabel5 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents BunifuCustomLabel4 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents BunifuCustomLabel2 As Bunifu.Framework.UI.BunifuCustomLabel
 End Class
