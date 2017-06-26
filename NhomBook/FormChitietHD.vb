@@ -94,7 +94,7 @@
         dgChitietHd.Columns("mas").HeaderText = "Mã sách"
         dgChitietHd.Columns("soluong").HeaderText = "Số lượng"
         dgChitietHd.Columns("giaban").HeaderText = "Giá bán"
-        ' dgChitietHd.Columns("giamgia").HeaderText = "Giảm giá"
+        '  dgChitietHd.Columns("giamgia").HeaderText = "Giảm giá"
 
         dgChitietHd.Columns("thanhtien").HeaderText = "Thành tiền"
         dgChitietHd.Columns("dvt").HeaderText = "Đơn vị tính"

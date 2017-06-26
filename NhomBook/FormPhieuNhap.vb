@@ -130,7 +130,7 @@
             FormChiTietPN1.txtMapnCtpn.Text = row.Cells("mapn").Value.ToString
             FormChiTietPN1.txtManvCtpn.Text = row.Cells("manv").Value.ToString
             FormChiTietPN1.txtManccCtpn.Text = row.Cells("mancc").Value.ToString
-            FormChiTietPN1.txtNgNhapCtpn.Text = dtpNgaynhap.Value.ToString
+            FormChiTietPN1.txtNgNhapCtpn.Text = row.Cells("ngaynhap").Value.ToString
             FormChiTietPN1.txtTongTienCtpn.Text = row.Cells("tongtien").Value.ToString
 
             pn.Mapn = txtMapn.Text
@@ -398,5 +398,19 @@
 
     Private Sub FormChiTietPN1_Load(sender As Object, e As EventArgs) Handles FormChiTietPN1.Load
 
+    End Sub
+
+    Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
+        Dim SaveFileDialog1 As SaveFileDialog = New SaveFileDialog()
+
+        Dim colName As String = "Mã phiếu nhập,Mã nhân viên,Mã nhà cc,Ngày bán,Tổng tiền"
+        Try
+            SaveFileDialog1.Filter = "Excel (*.xlsx)|*.xlsx"
+            SaveFileDialog1.ShowDialog()
+            Dim File_name = SaveFileDialog1.FileName
+            Export_to_Excel(dgPhieuNhap.DataSource, colName, File_name)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+        End Try
     End Sub
 End Class
