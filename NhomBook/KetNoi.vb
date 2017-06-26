@@ -3,11 +3,21 @@ Public Class KetNoi
     Dim connectString As String = "Data Source=DIEUNINH\SQLEXPRESS;Initial Catalog=QuanLyBanSach;Integrated Security=True"
     Public cmd As New SqlCommand
     Public da As New SqlDataAdapter
-    Public con As New SqlConnection(connectString)
+    Public con As New SqlConnection
+    Public Sub New()
+        con = New SqlConnection
+        con.ConnectionString = connectString
+    End Sub
+
+
     Public Sub OpenConnect()
         '  con = New SqlConnection("Data Source=DESKTOP-R7TCLO5;Initial Catalog=quanlysach;Integrated Security=True")
         Try
-            con.Open()
+            If con.State <> ConnectionState.Open Then
+                con.ConnectionString = connectString
+                con.Open()
+            End If
+
 
         Catch ex As Exception
             MsgBox(ex.ToString)
@@ -98,7 +108,9 @@ Public Class KetNoi
         Return dt
     End Function
 
-
+    Protected Overloads Sub Dispose()
+        CloseConnect()
+        GC.SuppressFinalize(Me)
+    End Sub
 
 End Class
-
